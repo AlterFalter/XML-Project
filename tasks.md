@@ -2,8 +2,8 @@
 
 | Name | Status | Person | Technologien | Beschreibung |
 | ---- | ------ | ------ | ------------ | ------------ |
-| Bootstrap hinzufügen| | Yannis | CSS | |
-| JQuery hinzufügen | | Yannis | JS | |
+| Bootstrap hinzufügen| done | Yannis | CSS | |
+| JQuery hinzufügen | done | Yannis | JS | |
 | Standard Layout erstellen | | | XHTML, CSS | Header, Navigation und Footer erstellen, [Vergleiche](http://mmt.ximit.ch/sushi/index.XHTML) |
 | Noten XML erstellen | In Progress | Beat | XML | XML-Schema, 2 Beispiel Datenset erstellen, XML-Daten werden einfach am Ende angefügt |
 | Noten als Tabelle darstellen | |  | XHTML, CSS | |
