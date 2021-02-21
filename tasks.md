@@ -1,0 +1,23 @@
+# Tasks
+
+| Name | Status | Person | Technologien | Beschreibung |
+| ---- | ------ | ------ | ------------ | ------------ |
+| Bootstrap hinzufügen| | Yannis | CSS | |
+| JQuery hinzufügen | | Yannis | JS | |
+| Standard Layout erstellen | | | XHTML, CSS | Header, Navigation und Footer erstellen, [Vergleiche](http://mmt.ximit.ch/sushi/index.XHTML) |
+| Noten XML erstellen | In Progress | Beat | XML | XML-Schema, 2 Beispiel Datenset erstellen, XML-Daten werden einfach am Ende angefügt |
+| Noten als Tabelle darstellen | |  | XHTML, CSS | |
+| Noten Filter erstellen | |  | XHTML, CSS, JS, XPath | Dropdown pro Spalte mit allen Werten, nach Schüler, Fach/Modul, Prüfung |
+| Noten XML Import (Seite) | | | XHTML, CSS | nur Frontend |
+| Noten XML Upload | | Beat | Python, XHTML, CSS | | Backend mit Validation, bei Fehlschlag zurück zur XHTML-Seite |
+| Noten Grafik Frontend | |  | XHTML, CSS, JS | Python POST-Request, Grafik beim Server nachladen |
+| Noten Grafik | |  | SVG | Säulendiagramm, Durchschnitt für jedes Fach anzeigen, eine Grafik pro Schüler, [Beispiel](https://duckduckgo.com/?q=s%C3%A4ulendiagramm&t=vivaldi&iar=images&iax=images&ia=images&iai=http%3A%2F%2Ftexwelt.de%2Fwissen%2Fupfiles%2Ftest_268.png) |
+| Stundenplan Schema erstellen | | | XML | pro Klasse gematched |
+| Stundenplan Erfassung (Seite, Validierung) | | | XHTML, CSS, JS |  |
+| Stundenplan Erfassung (speichern) | | | Python, XML |  |
+| Stundenplan PDF Export | | | FO | |
+| Stundenplan PDF Link einfügen | | | XHTML, | |
+| Index Seite | |  | XHTML, CSS, (JS) | |
+| About Seite | | | XHTML, CSS | |
+| neue Noten überschreiben alte Noten | | | Python, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
+| | | | |
