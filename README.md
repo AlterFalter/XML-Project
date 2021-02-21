@@ -6,8 +6,8 @@ The tool is based on XML technologies and Python.
 
 ## Name Ideas
 
-KILIAS - Kills ILIAS
-BILIAS - Billiges ILIAS
+* KILIAS - Kills ILIAS
+* BILIAS - Billiges ILIAS
 
 ## Workflow
 
