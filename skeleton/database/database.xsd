@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="school-register">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="house-band"/>
+                <xs:element ref="statistics"/>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="house-band">
+    </xs:element>
+
+    <xs:element name="statistics">
+    </xs:element>
+
+</xs:schema>
