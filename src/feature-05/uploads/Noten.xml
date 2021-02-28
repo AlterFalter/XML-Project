@@ -1,0 +1,19 @@
+<?xml version ="1.0" ?>
+<Prüfung Datum="2021-01-01" Name="Vocabulary 5" Fach="Englisch" Klasse="5A">
+    <SchülerIn>
+        <Name>Karin Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Reto Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Nicole Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Michael Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+</Prüfung>

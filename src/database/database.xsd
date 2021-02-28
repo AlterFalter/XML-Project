@@ -13,6 +13,28 @@
     </xs:element>
 
     <xs:element name="statistics">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="class" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
+
+    <xs:element name="class">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="classSize">
+                    <xs:attribute name="name" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="classSize">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="6"/>
+            <xs:maxInclusive value="40"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>

@@ -15,14 +15,18 @@
             <fo:page-sequence master-reference="stats">
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="center" font-size="8pt">
-                        Schule Hinterwald Stats
+                        Schule Hinterwald - Class Stats
                         <fo:page-number/>
                     </fo:block>
                 </fo:static-content>
                 <fo:flow flow-name="xsl-region-body">
                     <fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt"
-                              background-color="blue" color="white" text-align="center" padding-top="5pt"
-                              padding-bottom="5pt">Class Sizes
+                              color="black" text-align="left" padding-top="5pt"
+                              padding-bottom="5pt">Schule Hinterwald
+                    </fo:block>
+                    <fo:block font-size="15pt" font-family="sans-serif" line-height="19pt" space-after.optimum="20pt"
+                              background-color="black" color="white" text-align="center" padding-top="5pt"
+                              padding-bottom="5pt">Class Stats
                     </fo:block>
                     <xsl:apply-templates
                             select="document('../database/database.xml')/school-register/statistics"

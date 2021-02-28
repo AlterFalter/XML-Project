@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Prüfungen>
+  <Prüfung Datum="2021-01-01" Name="Lineare Funktionen" Fach="Mathematik" Klasse="1A">
+    <SchülerIn>
+      <Name>Karin Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Reto Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Nicole Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Michael Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+  </Prüfung>
+  <Prüfung Datum="2021-02-01" Name="Diktat 1" Fach="Deutsch" Klasse="2B">
+    <SchülerIn>
+      <Name>Erika Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Max Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Jane Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>John Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+  </Prüfung>
+  <Prüfung Datum="2021-01-01" Name="Vocabulary 5" Fach="Englisch" Klasse="5A">
+    <SchülerIn>
+        <Name>Karin Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Reto Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Nicole Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Michael Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+</Prüfung>
+</Prüfungen>
