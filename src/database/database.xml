@@ -1,8 +1,5 @@
-<?xml version="1.0" ?>
-<school-register
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="database.xsd"
->
+<?xml version="1.0"?>
+<school-register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="database.xsd">
     <house-band>
         <member>Jim Morrison</member>
         <member>Jimmy Page</member>
@@ -11,7 +8,7 @@
         <member>John Bonham</member>
     </house-band>
     <statistics>
-        <class name="6a">20</class>
+        <class name="6a">39</class>
         <class name="6b">25</class>
         <class name="7a">10</class>
         <class name="7b">14</class>

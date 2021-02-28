@@ -10,7 +10,7 @@
         <html>
             <head>
                 <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="styles.css"/>
+                <link rel="stylesheet" type="text/css" href="theme.css"/>
             </head>
             <body>
 
@@ -18,7 +18,7 @@
 
                 <h1>Feature #02</h1>
                 <small>
-                    <a href="welcome.xml">Home</a>
+                    <a href="index.xml">Home</a>
                 </small>
 
                 <div class="content">

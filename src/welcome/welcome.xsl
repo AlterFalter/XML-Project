@@ -8,7 +8,7 @@
         <html>
             <head>
                 <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="styles.css"/>
+                <link rel="stylesheet" type="text/css" href="theme.css"/>
             </head>
             <body>
 
@@ -30,7 +30,7 @@
                     <hr></hr>
                     <a
                             href="database/database.xml"
-                    target="_blank"
+                            target="_blank"
                     >
                         show Database
                     </a>

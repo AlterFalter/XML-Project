@@ -16,7 +16,7 @@
 
                 <!-- Title and nav  -->
 
-                <h1>Feature #03</h1>
+                <h1>Feature #05</h1>
                 <small>
                     <a href="index.xml">Home</a>
                 </small>
@@ -25,22 +25,11 @@
 
                     <div>
                         <p>
-                            <i>Let's create a printable class statistics:
-                            </i>
-                        </p>
-                        <p>
-                            <a href="fo.xml" target="_blank">create FO</a>
-                            <small>(directly in browser with XSTL)</small>
-                        </p>
-                        <p>
-                            <a href="feature-03/pdf.php" target="_blank">create PDF</a>
-                            <small>(create FO and render as PDF via web service)</small>
+                            <i>Die Datei Noten.xml wurde erfolgreich hochgeladen</i><br/>
                         </p>
 
                     </div>
-
                 </div>
-
             </body>
         </html>
     </xsl:template>
