@@ -8,7 +8,7 @@
 | Noten XML erstellen | done | Beat | XML | XML-Schema, 2 Beispiel Datenset erstellen, XML-Daten werden einfach am Ende angefügt |
 | Noten als Tabelle darstellen | |  | XHTML, CSS | |
 | Noten Filter erstellen | |  | XHTML, CSS, JS, XPath | Dropdown pro Spalte mit allen Werten, nach Schüler, Fach/Modul, Prüfung |
-| Noten XML Import (Seite) | | | XHTML, CSS | nur Frontend |
+| Noten XML Import (Seite) | Upload finished, design still open | Yannis | XHTML, CSS | nur Frontend + Design|
 | Noten XML Upload | done | Beat | PHP, XHTML, CSS | | Backend mit Validation, bei Fehlschlag zurück zur XHTML-Seite |
 | Noten Grafik Frontend | |  | XHTML, CSS, JS | Python POST-Request, Grafik beim Server nachladen |
 | Noten Grafik | In Progress | Beat | SVG | Säulendiagramm, Durchschnitt für jedes Fach anzeigen, eine Grafik pro Schüler, [Beispiel](https://duckduckgo.com/?q=s%C3%A4ulendiagramm&t=vivaldi&iar=images&iax=images&ia=images&iai=http%3A%2F%2Ftexwelt.de%2Fwissen%2Fupfiles%2Ftest_268.png) |
@@ -20,4 +20,3 @@
 | Index Seite | |  | XHTML, CSS, (JS) | |
 | About Seite | | | XHTML, CSS | |
 | neue Noten überschreiben alte Noten | | | PHP, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
-| | | | |
