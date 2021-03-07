@@ -1,6 +1,43 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Noten-DB.xsl"?>
 <Prüfungen>
-  <Prüfung Datum="2021-01-01" Name="Lineare Funktionen" Fach="Mathematik" Klasse="1A">
+  <Prüfung Datum="2021-01-01" Name="Addieren 1" Fach="Mathematik" Klasse="1A">
+    <SchülerIn>
+      <Name>Karin Mustermann</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Reto Mustermann</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Nicole Doe</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Michael Doe</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+  </Prüfung>
+  <Prüfung Datum="2021-01-01" Name="Addieren 2" Fach="Mathematik" Klasse="1A">
+    <SchülerIn>
+      <Name>Karin Mustermann</Name>
+      <Note>5.5</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Reto Mustermann</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Nicole Doe</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Michael Doe</Name>
+      <Note>6.0</Note>
+    </SchülerIn>
+  </Prüfung>
+  <Prüfung Datum="2021-02-01" Name="Schreiben 1" Fach="Deutsch" Klasse="1A">
     <SchülerIn>
       <Name>Karin Mustermann</Name>
       <Note>5.0</Note>
@@ -16,6 +53,24 @@
     <SchülerIn>
       <Name>Michael Doe</Name>
       <Note>5.0</Note>
+    </SchülerIn>
+  </Prüfung>
+  <Prüfung Datum="2021-01-01" Name="Vocabulary 1" Fach="Englisch" Klasse="1A">
+    <SchülerIn>
+      <Name>Karin Mustermann</Name>
+      <Note>4.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Reto Mustermann</Name>
+      <Note>4.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Nicole Doe</Name>
+      <Note>4.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Michael Doe</Name>
+      <Note>4.0</Note>
     </SchülerIn>
   </Prüfung>
   <Prüfung Datum="2021-02-01" Name="Diktat 1" Fach="Deutsch" Klasse="2B">
@@ -36,22 +91,40 @@
       <Note>5.0</Note>
     </SchülerIn>
   </Prüfung>
-  <Prüfung Datum="2021-01-01" Name="Vocabulary 5" Fach="Englisch" Klasse="5A">
+  <Prüfung Datum="2021-02-01" Name="Multiplizieren 1" Fach="Mathematik" Klasse="2B">
     <SchülerIn>
-        <Name>Karin Mustermann</Name>
-        <Note>5.0</Note>
+      <Name>Erika Mustermann</Name>
+      <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Reto Mustermann</Name>
-        <Note>5.0</Note>
+      <Name>Max Mustermann</Name>
+      <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Nicole Doe</Name>
-        <Note>5.0</Note>
+      <Name>Jane Doe</Name>
+      <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Michael Doe</Name>
-        <Note>5.0</Note>
+      <Name>John Doe</Name>
+      <Note>5.0</Note>
     </SchülerIn>
-</Prüfung>
+  </Prüfung>
+  <Prüfung Datum="2021-02-01" Name="Vocabulary 2" Fach="Englisch" Klasse="2B">
+    <SchülerIn>
+      <Name>Erika Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Max Mustermann</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>Jane Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+      <Name>John Doe</Name>
+      <Note>5.0</Note>
+    </SchülerIn>
+  </Prüfung>
 </Prüfungen>

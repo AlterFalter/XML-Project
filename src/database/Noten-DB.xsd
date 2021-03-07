@@ -31,9 +31,18 @@
 	</xs:element>
 	
 	<xs:simpleType name ="noteType">
-	    <xs:restriction base="xs:float">
-		    <xs:minInclusive value="1.0"/>
-			<xs:maxInclusive value="6.0"/>
+	    <xs:restriction base="xs:decimal">
+		    <xs:enumeration value ="1.0"/>
+			<xs:enumeration value ="1.5"/>
+			<xs:enumeration value ="2.0"/>
+			<xs:enumeration value ="2.5"/>
+			<xs:enumeration value ="3.0"/>
+			<xs:enumeration value ="3.5"/>
+			<xs:enumeration value ="4.0"/>
+			<xs:enumeration value ="4.5"/>
+			<xs:enumeration value ="5.0"/>
+			<xs:enumeration value ="5.5"/>
+			<xs:enumeration value ="6.0"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
