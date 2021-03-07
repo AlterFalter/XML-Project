@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Stundenpläne xsi:noNamespaceSchemaLocation="stundenplan.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Stundenplan Klasse="1A" Verantwortlich="Hans Muster">
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>8:10 - 8:55</Zeit>
+      <Fach>Sport</Fach>
+      <Raum>Turnhalle A</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>9:00 - 9:45</Zeit>
+      <Fach>Sport</Fach>
+      <Raum>Turnhalle A</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>10:15 - 11:00</Zeit>
+      <Fach>Mathematik</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Peter Lustig</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Dienstag</Tag>
+      <Zeit>13:10 - 13:55</Zeit>
+      <Fach>Englisch</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Karin Mustermann</Lehrperson>
+    </Block>
+  </Stundenplan>
+</Stundenpläne>
