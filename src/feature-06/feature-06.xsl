@@ -4,6 +4,9 @@
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
+
+    <xsl:key name="fach-key" match="/Prüfungen/Prüfung[SchülerIn/Name='Karin Mustermann']/@Fach" use="." />
+
     <xsl:template match="feature">
         <html>
             <head>
@@ -14,45 +17,40 @@
 
 
                 <!-- title and nav  -->
-                <h1>Feature #05</h1>
+                <h1>Feature #06</h1>
                 <small>
                     <a href="index.xml">Home</a>
                 </small>
 
                 <div class="content">
 
-                    <p>
-                        <h2>Noten hochladen</h2>
-                    </p>
-
-
-                    <!-- upload a .xml file  -->
                     <div>
-					
-					
-					Hier können Sie eine Musterdatei "Noten.xml" herunterladen, um darin die Noten einer Prüfung einzutragen.
-					<br />
-
-					<a href="feature-05\Noten.xml" download="Noten.xml">Download</a>
-					<br />
-
-					<br />
-					Die ausgefüllte Datei können Sie anschliessen wieder hier hochladen.
-					<br />
-					
-                    <br />
-					<form action="feature-05/upload.php" method="post" enctype="multipart/form-data">
-					Bitte die Datei zum Hochladen auswählen:
-					<input type="file" name="fileToUpload" id="fileToUpload"/>
-					<input type="submit" value="Datei hochladen" name="submit"/>
-					</form>
+                        <h2>Auswahl:</h2>
 						
-                        
+						<p>
+						    <a href="feature-06-2.xml">Die Notenverteilung einer Prüfung abfragen</a>
+						</p>
+						<p>
+						    <a href="feature-06-3.xml">Alle Prüfungsnoten einer Schülerin / eines Schülers abfragen</a>
+						</p>
+						<p>
+						    <a href="feature-06-1.xml">Den Notendurchschnitt einer Schülerin / eines Schülers abfragen</a>
+						</p>
+						
+				
                     </div>
                 </div>
 
             </body>
         </html>
     </xsl:template>
+
+    <xsl:template match="Prüfung">
+	
+        <li>
+            <xsl:value-of select="@Fach"/>
+        </li>
+	
+    </xsl:template>       
 
 </xsl:stylesheet>
