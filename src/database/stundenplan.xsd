@@ -5,6 +5,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="Stundenplan" maxOccurs="unbounded" />
+                <xs:element ref="Konfiguration" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -30,8 +31,33 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+    <xs:element name="Konfiguration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Tage" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="Zeiten" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 	
-	<xs:simpleType name ="tagType">
+    <xs:element name="Tage">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Tag" type="tagType" minOccurs="1" maxOccurs="7"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Zeiten">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Zeit" type="zeitType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    	<xs:simpleType name ="tagType">
 	    <xs:restriction base="xs:string">
 		    <xs:enumeration value="Montag"/>
             <xs:enumeration value="Dienstag"/>
@@ -52,5 +78,4 @@
             <xs:enumeration value="15:15 - 16:00"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
 </xs:schema>

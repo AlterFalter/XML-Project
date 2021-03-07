@@ -31,4 +31,22 @@
       <Lehrperson>Karin Mustermann</Lehrperson>
     </Block>
   </Stundenplan>
+  <Konfiguration>
+    <Tage>
+      <Tag>Montag</Tag>
+      <Tag>Dienstag</Tag>
+      <Tag>Mittwoch</Tag>
+      <Tag>Donnerstag</Tag>
+      <Tag>Freitag</Tag>
+    </Tage>
+    <Zeiten>
+      <Zeit>8:10 - 8:55</Zeit>
+      <Zeit>9:00 - 9:45</Zeit>
+      <Zeit>10:15 - 11:00</Zeit>
+      <Zeit>11:05 - 11:50</Zeit>
+      <Zeit>13:10 - 13:55</Zeit>
+      <Zeit>14:00 - 14:45</Zeit>
+      <Zeit>15:15 - 16:00</Zeit>
+    </Zeiten>
+  </Konfiguration>
 </Stundenpläne>
