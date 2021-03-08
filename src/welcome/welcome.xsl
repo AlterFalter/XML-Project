@@ -1,41 +1,22 @@
 <?xml version="1.0" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+    <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
 
     <xsl:template match="menu">
         <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="css/style.css"/>
-            </head>
+            <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
-
-                <!-- title and nav  -->
-                <h1>Schule Hinterwald Reloaded</h1>
-
-                <div class="content">
-
-                    <p>
-                        <i>Welcome...</i>
-                    </p>
-
-                    <!-- render menu nav  -->
-                    <ul>
-                        <xsl:apply-templates select="item">
-                            <xsl:sort select="index" data-type="text" order="ascending"/>
-                        </xsl:apply-templates>
-                    </ul>
-                    <hr></hr>
-                    <a
-                            href="database/database.xml"
-                            target="_blank"
-                    >
-                        show Database
-                    </a>
-                </div>
-
+                <xsl:copy-of select="document('../layout/header.html')"/>
+                <ul>
+                    <xsl:apply-templates select="item">
+                        <xsl:sort select="index" data-type="text" order="ascending"/>
+                    </xsl:apply-templates>
+                </ul>
+                <a href="database/database.xml" target="_blank">
+                    show Database
+                </a>
+                <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
@@ -51,5 +32,4 @@
             </a>
         </li>
     </xsl:template>
-
 </xsl:stylesheet>
