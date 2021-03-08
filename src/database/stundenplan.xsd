@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:element name="Stundenpläne">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Stundenplan" maxOccurs="unbounded" />
+                <xs:element ref="Konfiguration" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Stundenplan">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Block" maxOccurs="unbounded" />
+            </xs:sequence>
+			<xs:attribute name ="Klasse" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="Block">
+	    <xs:complexType>
+		    <xs:sequence>
+		        <xs:element name="Tag" type="tagType"/>
+		        <xs:element name="Zeit" type="zeitType"/>
+                <xs:element name="Fach" type="xs:string"/>
+                <xs:element name="Raum" type="xs:string"/>
+                <xs:element name="Lehrperson" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="Konfiguration">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Tage" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="Zeiten" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
+    <xs:element name="Tage">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Tag" type="tagType" minOccurs="1" maxOccurs="7"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Zeiten">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Zeit" type="zeitType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    	<xs:simpleType name ="tagType">
+	    <xs:restriction base="xs:string">
+		    <xs:enumeration value="Montag"/>
+            <xs:enumeration value="Dienstag"/>
+            <xs:enumeration value="Mittwoch"/>
+            <xs:enumeration value="Donnerstag"/>
+            <xs:enumeration value="Freitag"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+    <xs:simpleType name ="zeitType">
+	    <xs:restriction base="xs:string">
+		    <xs:enumeration value="8:10 - 8:55"/>
+            <xs:enumeration value="9:00 - 9:45"/>
+            <xs:enumeration value="10:15 - 11:00"/>
+            <xs:enumeration value="11:05 - 11:50"/>
+            <xs:enumeration value="13:10 - 13:55"/>
+            <xs:enumeration value="14:00 - 14:45"/>
+            <xs:enumeration value="15:15 - 16:00"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

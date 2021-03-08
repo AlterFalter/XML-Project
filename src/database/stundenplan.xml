@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Stundenpläne xsi:noNamespaceSchemaLocation="stundenplan.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Stundenplan Klasse="1a">
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>8:15 - 9:45</Zeit>
+      <Fach>Sport</Fach>
+      <Raum>Turnhalle A</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>10:15 - 11:45</Zeit>
+      <Fach>Sport</Fach>
+      <Raum>Turnhalle A</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>13:15 - 14:45</Zeit>
+      <Fach>Mathematik</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Peter Lustig</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Dienstag</Tag>
+      <Zeit>15:00 - 16:30</Zeit>
+      <Fach>Englisch</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Karin Mustermann</Lehrperson>
+    </Block>
+  </Stundenplan>
+  <Stundenplan Klasse="1b">
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>8:15 - 9:45</Zeit>
+      <Fach>Englisch</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>10:15 - 11:45</Zeit>
+      <Fach>Sport</Fach>
+      <Raum>Turnhalle A</Raum>
+      <Lehrperson>Max Muster</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Montag</Tag>
+      <Zeit>13:15 - 14:45</Zeit>
+      <Fach>Mathematik</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Peter Lustig</Lehrperson>
+    </Block>
+    <Block>
+      <Tag>Dienstag</Tag>
+      <Zeit>15:00 - 16:30</Zeit>
+      <Fach>Englisch</Fach>
+      <Raum>Online</Raum>
+      <Lehrperson>Karin Mustermann</Lehrperson>
+    </Block>
+  </Stundenplan>
+  <Konfiguration>
+    <Tage>
+      <Tag>Montag</Tag>
+      <Tag>Dienstag</Tag>
+      <Tag>Mittwoch</Tag>
+      <Tag>Donnerstag</Tag>
+      <Tag>Freitag</Tag>
+    </Tage>
+    <Zeiten>
+      <Zeit>8:15 - 9:45</Zeit>
+      <Zeit>10:15 - 11:45</Zeit>
+      <Zeit>13:15 - 14:45</Zeit>
+      <Zeit>15:00 - 16:30</Zeit>
+    </Zeiten>
+  </Konfiguration>
+</Stundenpläne>

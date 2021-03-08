@@ -16,7 +16,7 @@
 
                 <!-- Title and nav  -->
 
-                <h1>Feature #03</h1>
+                <h1>Feature Stundenplan</h1>
                 <small>
                     <a href="../index.xml">Home</a>
                 </small>
@@ -25,24 +25,30 @@
 
                     <div>
                         <p>
-                            <i>Let's create a printable class statistics:
-                            </i>
+                            <i>Class successfully updated:</i><br/>
+                            <small>(hit CTRL+F5 to clear cache)</small>
                         </p>
-                        <p>
-                            <a href="fo.xml" target="_blank">create FO</a>
-                            <small>(directly in browser with XSTL)</small>
-                        </p>
-                        <p>
-                            <a href="pdf.php" target="_blank">create PDF</a>
-                            <small>(create FO and render as PDF via web service)</small>
-                        </p>
+
+                        <ul>
+                            <xsl:apply-templates
+                                    select="document('../database/database.xml')/school-register/statistics"
+                            >
+                            </xsl:apply-templates>
+                        </ul>
 
                     </div>
-
                 </div>
-
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="class">
+        <li>
+            Class <xsl:value-of select="@name"/>:
+            <strong>
+                <xsl:value-of select="text()"/>
+            </strong>
+        </li>
     </xsl:template>
 
 </xsl:stylesheet>
