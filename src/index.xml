@@ -22,8 +22,8 @@
         <index>3</index>
     </item>
     <item>
-        <text>Feature 4: add user input to data (using XPATH and XSD)</text>
-        <link>feature-04.xml</link>
+        <text>Feature Stundenplan</text>
+        <link>feature-stundenplan.xml</link>
         <index>4</index>
     </item>
 	<item>
