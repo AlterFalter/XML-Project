@@ -10,15 +10,15 @@
         <html>
             <head>
                 <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
             </head>
             <body>
 
                 <!-- Title and nav  -->
 
-                <h1>Feature #04</h1>
+                <h1>Feature Stundenplan</h1>
                 <small>
-                    <a href="index.xml">Home</a>
+                    <a href="../index.xml">Home</a>
                 </small>
 
                 <div class="content">

@@ -10,7 +10,7 @@
         <html>
             <head>
                 <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
             </head>
             <body>
 
@@ -18,7 +18,7 @@
 
                 <h1>Feature #03</h1>
                 <small>
-                    <a href="index.xml">Home</a>
+                    <a href="../index.xml">Home</a>
                 </small>
 
                 <div class="content">
@@ -33,7 +33,7 @@
                             <small>(directly in browser with XSTL)</small>
                         </p>
                         <p>
-                            <a href="feature-03/pdf.php" target="_blank">create PDF</a>
+                            <a href="pdf.php" target="_blank">create PDF</a>
                             <small>(create FO and render as PDF via web service)</small>
                         </p>
 

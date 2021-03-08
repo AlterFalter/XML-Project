@@ -4,6 +4,10 @@
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
+    <xsl:variable name="selectedPupil" select="document('selectedPupil.xml')/selectedPupil/text()"/>
+	
+	<xsl:key name="fach-key" match="/Prüfungen/Prüfung/@Fach" use="." />
+
     <xsl:template match="feature">
         <html>
             <head>
@@ -14,25 +18,27 @@
 
 
                 <!-- title and nav  -->
-                <h1>Feature #01</h1>
+                <h1>Feature Notenauswertung</h1>
                 <small>
                     <a href="../index.xml">Home</a>
                 </small>
 
                 <div class="content">
 
-                    <p>
-                        <i>Let's access some data</i>
-                    </p>
-
-
                     <!-- load data from DB and render  -->
                     <div>
-                        <h2>our school own house band:</h2>
-                        <xsl:apply-templates
-                                select="document('../database/database.xml')/school-register/house-band"
-                        >
-                        </xsl:apply-templates>
+                        <h2>Notendurchschnitt von 
+						<xsl:value-of select="$selectedPupil" />
+						</h2>
+			
+				<xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung/@Fach[generate-id()
+                                       = generate-id(key('fach-key',.)[1])]">
+					<li>
+						<xsl:value-of select="."/>: 
+						<xsl:variable name="fach" select="."/>
+						<xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note)"/>
+					</li>
+				</xsl:for-each>
                     </div>
                 </div>
 
@@ -40,10 +46,12 @@
         </html>
     </xsl:template>
 
-    <xsl:template match="member">
+    <xsl:template match="Prüfung">
+	
         <li>
-            <xsl:value-of select="text()"/>
+            <xsl:value-of select="@Fach"/>
         </li>
-    </xsl:template>
+	
+    </xsl:template>       
 
 </xsl:stylesheet>
