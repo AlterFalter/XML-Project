@@ -8,6 +8,16 @@
 
     <xsl:variable name="selectedExam" select="document('selectedExam.xml')/selectedExam/text()"/>
 
+    <xsl:template match="menu">
+        <html>
+            <xsl:copy-of select="document('../layout/head.html')"/>
+            <body>
+                <xsl:copy-of select="document('../layout/header.html')"/>
+                <xsl:apply-templates select="feature"/>
+                <xsl:copy-of select="document('../layout/footer.html')"/>
+            </body>
+        </html>
+    </xsl:template>
 
     <xsl:template match="feature">
         <html>
@@ -20,9 +30,6 @@
                 <!-- Title and nav  -->
 
                 <h1>Feature Notenauswertung</h1>
-                <small>
-                    <a href="../index.php">Home</a>
-                </small>
 
                 <div class="content">
 
@@ -35,7 +42,6 @@
 
 						<xsl:call-template name="bars">
                         </xsl:call-template>
-				
 
                     </div>
 

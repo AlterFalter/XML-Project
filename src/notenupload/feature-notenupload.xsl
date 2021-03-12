@@ -4,6 +4,17 @@
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
+    <xsl:template match="menu">
+        <html>
+            <xsl:copy-of select="document('../layout/head.html')"/>
+            <body>
+                <xsl:copy-of select="document('../layout/header.html')"/>
+                <xsl:apply-templates select="feature"/>
+                <xsl:copy-of select="document('../layout/footer.html')"/>
+            </body>
+        </html>
+    </xsl:template>
+
     <xsl:template match="feature">
         <html>
             <head>
@@ -15,9 +26,6 @@
 
                 <!-- title and nav  -->
                 <h1>Feature Noten Upload</h1>
-                <small>
-                    <a href="../index.php">Home</a>
-                </small>
 
                 <div class="content">
 
@@ -42,12 +50,11 @@
 					
                     <br />
 					<form action="upload.php" method="post" enctype="multipart/form-data">
-					Bitte die Datei zum Hochladen auswählen:
-					<input type="file" name="fileToUpload" id="fileToUpload"/>
-					<input type="submit" value="Datei hochladen" name="submit"/>
+                        Bitte die Datei zum Hochladen auswählen:
+                        <input type="file" name="fileToUpload" id="fileToUpload"/>
+                        <input type="submit" value="Datei hochladen" name="submit"/>
 					</form>
 						
-                        
                     </div>
                 </div>
 
