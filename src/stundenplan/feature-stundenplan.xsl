@@ -95,6 +95,17 @@
                     <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Freitag']" /></td>
                 </tr>
             </table>
+            <div>
+                <xsl:variable name="class" select="@Klasse" />
+                <form action="editStundenplan.php" method="post">
+                    <input type="hidden" name="class" id="class-input" value="{$class}"/>
+                    <button type="submit" value="submit">Stundenplan bearbeiten</button>
+                </form>
+                <form action="pdf.php" method="post">
+                    <input type="hidden" name="class" id="class-input" value="{$class}"/>
+                    <button type="submit" value="submit">Stundenplan herunterladen (PDF)</button>
+                </form>
+            </div>
         </div>
     </xsl:template>
 

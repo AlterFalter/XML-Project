@@ -4,16 +4,15 @@
 foreach ($_POST as $key => $value) {
 }
 $class = $_POST['class'];
-$size = $_POST['size'];
 
 // load XML database
-$dbFile = '../database/database.xml';
+$dbFile = 'selectedClass.xml';
 $dataRaw = file_get_contents($dbFile);
 $db = new DOMDocument();
 $db->loadXML($dataRaw);
 
 // add new entry to xml
-updateClass($db, $class, $size);
+updateSelectedClass($db, $class);
 
 // validate
 validateDatabase($db);
@@ -22,18 +21,21 @@ validateDatabase($db);
 file_put_contents($dbFile, $db->saveXML());
 
 // redirect user
-header('Location: ../feature-04.done.xml');
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Content-Type: application/xml; charset=utf-8");
+header('Location: feature-stundenplan-edit.xml');
 exit();
 
-function updateClass($db, $class, $size)
+function updateSelectedClass($db, $class)
 {
     // query stats
-    $xPathQuery = sprintf('//statistics/class[@name="%s"]', $class);
+    $xPathQuery = "//selectedClass";
     $xPath = new DOMXPath($db);
     $nodes = $xPath->query($xPathQuery);
 
     // change
-    $nodes->item(0)->nodeValue = $size;
+    $nodes->item(0)->nodeValue = $class;
 }
 
 function validateDatabase($db)
@@ -42,7 +44,7 @@ function validateDatabase($db)
     libxml_use_internal_errors(true);
 
     // validate against Schema
-    $xsd = '../database/database.xsd';
+    $xsd = 'selectedClass.xsd';
     $result = $db->schemaValidate($xsd);
     if ($result) {
         libxml_use_internal_errors(false);
@@ -50,13 +52,12 @@ function validateDatabase($db)
     }
 
     // create error description
-    echo('<html><body></body><a href="../feature-04.xml">back</a><p>');
+    echo('<html><body></body><a href="feature-stundenplan.xml">back</a><p>');
     $errors = printErrors();
     print($errors);
     echo('</p></body></html>');
     libxml_use_internal_errors(false);
     exit();
-
 }
 
 function printErrors()

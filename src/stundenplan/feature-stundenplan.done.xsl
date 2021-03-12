@@ -22,33 +22,14 @@
                 </small>
 
                 <div class="content">
-
                     <div>
                         <p>
-                            <i>Class successfully updated:</i><br/>
-                            <small>(hit CTRL+F5 to clear cache)</small>
+                            <i>Stundenplan erfolgreich updated:</i><br/>
                         </p>
-
-                        <ul>
-                            <xsl:apply-templates
-                                    select="document('../database/database.xml')/school-register/statistics"
-                            >
-                            </xsl:apply-templates>
-                        </ul>
-
                     </div>
                 </div>
             </body>
         </html>
-    </xsl:template>
-
-    <xsl:template match="class">
-        <li>
-            Class <xsl:value-of select="@name"/>:
-            <strong>
-                <xsl:value-of select="text()"/>
-            </strong>
-        </li>
     </xsl:template>
 
 </xsl:stylesheet>
