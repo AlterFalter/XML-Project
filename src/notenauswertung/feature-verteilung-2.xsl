@@ -21,7 +21,7 @@
 
                 <h1>Feature Notenauswertung</h1>
                 <small>
-                    <a href="../index.xml">Home</a>
+                    <a href="../index.php">Home</a>
                 </small>
 
                 <div class="content">

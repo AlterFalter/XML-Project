@@ -16,7 +16,7 @@
                 <!-- title and nav  -->
                 <h1>Feature Noten Upload</h1>
                 <small>
-                    <a href="../index.xml">Home</a>
+                    <a href="../index.php">Home</a>
                 </small>
 
                 <div class="content">
