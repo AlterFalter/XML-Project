@@ -1,4 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="feature-verteilung-2.xsl"?>
 
-<feature></feature>
+<menu>
+    <feature></feature>
+</menu>
