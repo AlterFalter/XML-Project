@@ -13,7 +13,7 @@
                         <xsl:sort select="index" data-type="text" order="ascending"/>
                     </xsl:apply-templates>
                 </ul>
-                <a href="database/database.xml" target="_blank">
+                <a href="../database/database.xml" target="_blank">
                     show Database
                 </a>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
