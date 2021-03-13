@@ -62,7 +62,6 @@ button {
     margin-top: 10px;
     margin-left: 110px;
 }
-
 table, th, td {
     border: 3px solid black;
 }
@@ -70,4 +69,8 @@ table, th, td {
 th, td {
     min-width:300px;
     text-align:center;
+}
+dl, ol, ul {
+    margin: 0px;
+    padding-bottom: 1rem;
 }
