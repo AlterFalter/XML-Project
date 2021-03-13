@@ -18,7 +18,7 @@
 | Stundenplan Erfassung (speichern) | Done | Roger | PHP, XML |  |
 | Stundenplan PDF Export | In Progress | Roger | PHP, FO | |
 | Stundenplan PDF Link einfügen |  In Progress | Roger | XHTML, | |
-| Index Seite | |  | XHTML, CSS, (JS) | |
-| About Seite | | | XHTML, CSS | |
+| Index Seite | In Progress | Yannis | XHTML, CSS, (JS) | |
+| About Seite | In Progress | Yannis | XHTML, CSS | |
 | neue Noten überschreiben alte Noten | | | PHP, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
 | Server final upload | | Beat, Roger, Yannis | Git, PHP | Upload the final version of the code to the server and test all of the functionality. |
