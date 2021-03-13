@@ -6,6 +6,10 @@
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
+    <xsl:key name="xxx" match="/Prüfungen/Prüfung/SchülerIn/Name" use="." />
+	
+	<xsl:variable name="class" select="document('selectedClass.xml')/selectedClass/text()" />
+
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
@@ -27,30 +31,39 @@
 
                 <!-- Title and nav  -->
 
-                <h1>Feature #03</h1>
+                <h1>Feature Notenauswertung</h1>
 
                 <div class="content">
 
                     <div>
                         <p>
-                            <i>Let's create a printable class statistics:
-                            </i>
+                            SchülerIn auswählen:
                         </p>
-                        <p>
-                            <a href="fo.xml" target="_blank">create FO</a>
-                            <small>(directly in browser with XSTL)</small>
-                        </p>
-                        <p>
-                            <a href="pdf.php" target="_blank">create PDF</a>
-                            <small>(create FO and render as PDF via web service)</small>
-                        </p>
+
+                        <!-- Form -->
+                        <form action="insertPupil.php" method="post">
+                            <div>
+                                <label for="class">SchülerIn</label>
+                                <select name="class" id="class-input">
+                                    <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/SchülerIn/Name[generate-id()
+                                       = generate-id(key('xxx',.)[1])]">
+					                    <option>
+						                    <xsl:value-of select="."/> 											
+					                    </option>
+				                    </xsl:for-each>
+                                </select>
+                            </div>
+                            <button type="submit">Noten abfragen</button>
+                        </form>
 
                     </div>
-
                 </div>
-
             </body>
         </html>
     </xsl:template>
-
+<!--
+    <xsl:template match="SchülerIn">
+        <option><xsl:value-of select="Name"/></option>
+    </xsl:template>
+-->
 </xsl:stylesheet>

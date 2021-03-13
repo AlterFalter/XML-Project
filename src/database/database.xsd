@@ -1,40 +1,19 @@
 <?xml version="1.0" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="school-register">
+    <xs:element name="Schule">
         <xs:complexType>
             <xs:all>
-                <xs:element ref="house-band"/>
-                <xs:element ref="statistics"/>
+                <xs:element ref="Klassen" minOccurs="1" maxOccurs="1"/>
             </xs:all>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="house-band">
-    </xs:element>
-
-    <xs:element name="statistics">
+    <xs:element name="Klassen">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="class" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="Klasse" type="xs:string" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-    <xs:element name="class">
-        <xs:complexType>
-            <xs:simpleContent>
-                <xs:extension base="classSize">
-                    <xs:attribute name="name" type="xs:string"/>
-                </xs:extension>
-            </xs:simpleContent>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:simpleType name="classSize">
-        <xs:restriction base="xs:integer">
-            <xs:minInclusive value="6"/>
-            <xs:maxInclusive value="40"/>
-        </xs:restriction>
-    </xs:simpleType>
 
 </xs:schema>

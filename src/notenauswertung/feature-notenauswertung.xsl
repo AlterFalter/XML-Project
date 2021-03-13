@@ -4,18 +4,21 @@
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
+
+    <xsl:key name="fach-key" match="/Prüfungen/Prüfung[SchülerIn/Name='Karin Mustermann']/@Fach" use="." />
+
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="about"/>
+                <xsl:apply-templates select="feature"/>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
-    <xsl:template match="about">
+    <xsl:template match="feature">
         <html>
             <head>
                 <title>Schule Hinterwald Reloaded</title>
@@ -23,27 +26,37 @@
             </head>
             <body>
 
-                <h1>Schule Hinterwald Reloaded</h1>
+                <!-- title and nav  -->
+                <h1>Feature Notenauswertung</h1>
 
                 <div class="content">
 
-                    <p>
-                        Version:
-                        <xsl:value-of select="version"/>
-                    </p>
-                    <p>
-                        Date:
-                        <xsl:value-of select="date"/>
-                    </p>
-
-                    <p>
-                        Author:
-                        <xsl:value-of select="author"/>
-                    </p>
+                    <div>
+                        <h2>Auswahl:</h2>
+						
+						<p>
+						    <a href="feature-verteilung.xml">Die Notenverteilung einer Prüfung abfragen</a>
+						</p>
+						<p>
+						    <a href="feature-abfrage.xml">Alle Prüfungsnoten einer Schülerin / eines Schülers abfragen</a>
+						</p>
+						<p>
+						    <a href="feature-durchschnitt.xml">Den Notendurchschnitt einer Schülerin / eines Schülers abfragen</a>
+						</p>
+						
+                    </div>
                 </div>
 
             </body>
         </html>
     </xsl:template>
+
+    <xsl:template match="Prüfung">
+	
+        <li>
+            <xsl:value-of select="@Fach"/>
+        </li>
+	
+    </xsl:template>       
 
 </xsl:stylesheet>

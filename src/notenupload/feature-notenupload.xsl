@@ -23,34 +23,43 @@
             </head>
             <body>
 
+
                 <!-- title and nav  -->
-                <h1>Feature #01</h1>
+                <h1>Feature Noten Upload</h1>
 
                 <div class="content">
 
                     <p>
-                        <i>Let's access some data</i>
+                        <h2>Noten hochladen</h2>
                     </p>
 
 
-                    <!-- load data from DB and render  -->
+                    <!-- upload a .xml file  -->
                     <div>
-                        <h2>our school own house band:</h2>
-                        <xsl:apply-templates
-                                select="document('../database/database.xml')/school-register/house-band"
-                        >
-                        </xsl:apply-templates>
+					
+					
+					Hier können Sie eine Musterdatei "Noten.xml" herunterladen, um darin die Noten einer Prüfung einzutragen.
+					<br />
+
+					<a href="Noten.xml" download="Noten.xml">Download</a>
+					<br />
+
+					<br />
+					Die ausgefüllte Datei können Sie anschliessen wieder hier hochladen.
+					<br />
+					
+                    <br />
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+                        Bitte die Datei zum Hochladen auswählen:
+                        <input type="file" name="fileToUpload" id="fileToUpload"/>
+                        <input type="submit" value="Datei hochladen" name="submit"/>
+					</form>
+						
                     </div>
                 </div>
 
             </body>
         </html>
-    </xsl:template>
-
-    <xsl:template match="member">
-        <li>
-            <xsl:value-of select="text()"/>
-        </li>
     </xsl:template>
 
 </xsl:stylesheet>
