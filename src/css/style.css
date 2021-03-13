@@ -46,6 +46,8 @@ nav a:last-child {
 nav a:hover {
     background-color: var(--blue);
     color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 #content {
     padding-top: 40px;
