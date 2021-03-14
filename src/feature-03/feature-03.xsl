@@ -38,11 +38,11 @@
                         </p>
                         <p>
                             <a href="fo.xml" target="_blank">create FO</a>
-                            <small>(directly in browser with XSTL)</small>
+                            (directly in browser with XSTL)
                         </p>
                         <p>
                             <a href="pdf.php" target="_blank">create PDF</a>
-                            <small>(create FO and render as PDF via web service)</small>
+                            (create FO and render as PDF via web service)
                         </p>
 
                     </div>

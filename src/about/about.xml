@@ -1,9 +1,33 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="about.xsl"?>
-<menu>
-    <about>
-        <version>1.0</version>
-        <date>18.02.2021</date>
-        <author>roland.christen@hslu.ch</author>
-    </about>
-</menu>
+<about>
+    <version>1.0</version>
+    <date>14.03.2021</date>
+    <authors>
+        <author>
+            <name>Beat Kurmann</name>
+            <email>beat.kurmann@stud.hslu.ch</email>
+        </author>
+        <author>
+            <name>Roger Metzger</name>
+            <email>roger.metzger@stud.hslu.ch</email>
+        </author>
+        <author>
+            <name>Yannis Krämer</name>
+            <email>yannis.kraemer@stud.hslu.ch</email>
+        </author>
+    </authors>
+    <usedImages>
+        <usedImage>
+            <name>
+                Swiss mountains
+            </name>
+            <path>
+                images/SwissMountains.jpg
+            </path>
+            <source>
+                https://www.pexels.com/photo/mountain-ranges-covered-in-snow-714258/
+            </source>
+        </usedImage>
+    </usedImages>
+</about>

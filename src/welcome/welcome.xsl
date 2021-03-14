@@ -9,24 +9,36 @@
             <body>
                 <xsl:copy-of select="document('../layout/header.html')" />
                 <div id="content" class="container">
+                    <h2>Willkommen bei BILIAS</h2>
+                    <p><q>Das billigere und benutzerfreundlichere ILIAS!</q> - Die Ersteller von BILIAS</p>
+                    <h3>Navigation</h3>
                     <ul>
-                        <xsl:apply-templates select="item">
-                            <xsl:sort select="index" data-type="text" order="ascending" />
-                        </xsl:apply-templates>
+                        <xsl:apply-templates select="navigationItems/item"></xsl:apply-templates>
                     </ul>
-                    <a href="database/database.xml" target="_blank">show Database</a>
+                    <h3>Mehr erfahren</h3>
+                    <ul>
+                        <xsl:apply-templates select="links/link"></xsl:apply-templates>
+                    </ul>
                 </div>
                 <xsl:copy-of select="document('../layout/footer.html')" />
             </body>
         </html>
     </xsl:template>
-
-    <!-- single menu item  -->
     <xsl:template match="item">
         <li>
             <a>
                 <xsl:attribute name="href">
-                    <xsl:value-of select="link" />
+                    <xsl:value-of select="url" />
+                </xsl:attribute>
+                <xsl:value-of select="text" />
+            </a>
+        </li>
+    </xsl:template>
+    <xsl:template match="link">
+        <li>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="url" />
                 </xsl:attribute>
                 <xsl:value-of select="text" />
             </a>
