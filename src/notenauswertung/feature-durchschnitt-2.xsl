@@ -13,52 +13,38 @@
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="feature"/>
+                <div id="content" class="container">
+                    <xsl:apply-templates select="feature"/>
+                </div>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="feature">
-        <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-            </head>
-            <body>
-
-                <!-- title and nav  -->
-                <h1>Feature Notenauswertung</h1>
-
-                <div class="content">
-
-                    <!-- load data from DB and render  -->
-                    <div>
-                        <h2>Notendurchschnitt von 
-						<xsl:value-of select="$selectedPupil" />
-						</h2>
-			
-				<xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung/@Fach[generate-id()
-                                       = generate-id(key('fach-key',.)[1])]">
-					<li>
-						<xsl:value-of select="."/>: 
-						<xsl:variable name="fach" select="."/>
-						<xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note)"/>
-					</li>
-				</xsl:for-each>
-                    </div>
-                </div>
-
-            </body>
-        </html>
+        <h1>Feature Notenauswertung</h1>
+        <!-- load data from DB and render  -->
+        <div class="block">
+            <p>
+                <h5>Notendurchschnitt von <xsl:value-of select="$selectedPupil" /></h5>
+            </p>
+            <div>
+                <table class="notendurchschnitt">
+                    <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung/@Fach[generate-id()
+                                            = generate-id(key('fach-key',.)[1])]">
+                        <tr>
+                            <td class="firstColumn"><xsl:value-of select="."/>: </td>
+                            <xsl:variable name="fach" select="."/>
+                            <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note)"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </div>
+        </div>
     </xsl:template>
 
     <xsl:template match="Prüfung">
-	
-        <li>
-            <xsl:value-of select="@Fach"/>
-        </li>
-	
+        <xsl:value-of select="@Fach"/>
     </xsl:template>       
 
 </xsl:stylesheet>

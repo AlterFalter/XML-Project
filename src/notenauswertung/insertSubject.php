@@ -52,7 +52,7 @@ function validateDatabase($db)
     }
 
     // create error description
-    echo('<html><body></body><a href="../feature-04.xml">back</a><p>');
+    echo('<html><body></body><a href="../feature-notenauswertung.xml">back</a><p>');
     $errors = printErrors();
     print($errors);
     echo('</p></body></html>');

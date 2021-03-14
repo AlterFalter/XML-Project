@@ -18,9 +18,6 @@ if($imageFileName != "noten.xml") {
   $uploadOk = 0;
 }
 
-
-
-
 function libxml_display_error($error)
 {
     $return = "<br/>\n";
@@ -66,10 +63,6 @@ if (!$xml->schemaValidate('uploads/Noten.xsd')) {
 	echo "<br /><br />";
 }
 
-
-
-
-
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Die Datei wurde nicht hochgeladen.";
@@ -89,9 +82,5 @@ if ($uploadOk == 0) {
   }
   
 }
-
-
-
-
 
 ?>

@@ -29,8 +29,12 @@
             <url>https://github.com/AlterFalter/XML-Project</url>
         </link>
         <link>
-            <text>Datenbank</text>
-            <url>../database/database.xml</url>
+            <text>Noten Datenbank</text>
+            <url>../database/Noten-DB.xml</url>
+        </link>
+        <link>
+            <text>Stundenplan Datenbank</text>
+            <url>../database/stundenplan.xml</url>
         </link>
     </links>
 </menu>
