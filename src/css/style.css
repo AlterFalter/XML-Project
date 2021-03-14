@@ -69,7 +69,7 @@ button {
 .stundenplanbuttons form {
     display: inline;
 }
-.stundenplanblock, .notenuploadblock {
+.block {
     margin-top: 30px;
 }
 table {
@@ -93,6 +93,7 @@ td p {
 }
 .firstColumn {
     width: 10%;
+    font-weight: bold;
 }
 .column {
     width: 18%;
@@ -103,4 +104,7 @@ dl, ol, ul {
 }
 #fileToUpload {
     font-weight: bold;
+}
+.notendurchschnitt {
+    width: min-content;
 }

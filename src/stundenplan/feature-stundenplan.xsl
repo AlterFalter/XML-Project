@@ -24,7 +24,7 @@
         <div>
             <div>
                 <p>
-                    <i>Stundenpläne erstellen oder bearbeiten:</i>
+                    <i>Stundenpläne bearbeiten:</i>
                 </p>
                 <div>
                     <xsl:apply-templates select="document('../database/stundenplan.xml')/Stundenpläne/Stundenplan" />
@@ -34,7 +34,7 @@
     </xsl:template>
 
     <xsl:template match="Stundenplan">
-        <div class="stundenplanblock">
+        <div class="block">
             <h1>Klasse <xsl:value-of select="@Klasse"/></h1>
             <table>
                 <tr>
@@ -54,14 +54,9 @@
                     <xsl:with-param name="time">10:15 - 11:45</xsl:with-param>
                 </xsl:call-template>
 
-                <tr>
-                    <td>Mittag</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <xsl:call-template name="add_row">
+                    <xsl:with-param name="time">Mittag</xsl:with-param>
+                </xsl:call-template>
 
                 <xsl:call-template name="add_row">
                     <xsl:with-param name="time">13:15 - 14:45</xsl:with-param>
@@ -70,6 +65,7 @@
                 <xsl:call-template name="add_row">
                     <xsl:with-param name="time">15:00 - 16:30</xsl:with-param>
                 </xsl:call-template>
+                
             </table>
 
             <div class="stundenplanbuttons">
@@ -89,7 +85,7 @@
     <xsl:template name="add_row">
         <xsl:param name="time" />
         <tr>
-            <td><xsl:value-of select="$time" /></td>
+            <td class="firstColumn"><xsl:value-of select="$time" /></td>
             <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Montag']" /></td>
             <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Dienstag']" /></td>
             <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Mittwoch']" /></td>

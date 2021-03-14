@@ -15,51 +15,35 @@
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="feature"/>
+                <div id="content" class="container">
+                    <xsl:apply-templates select="feature"/>
+                </div>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="feature">
-        <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-            </head>
-            <body>
-
-                <!-- Title and nav  -->
-
-                <h1>Feature Notenauswertung</h1>
-
-                <div class="content">
-
-                    <div>
-                        <p>
-                            SchülerIn auswählen:
-                        </p>
-
-                        <!-- Form -->
-                        <form action="insertPupil.php" method="post">
-                            <div>
-                                <label for="class">SchülerIn</label>
-                                <select name="class" id="class-input">
-                                    <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/SchülerIn/Name[generate-id()
-                                       = generate-id(key('xxx',.)[1])]">
-					                    <option>
-						                    <xsl:value-of select="."/> 											
-					                    </option>
-				                    </xsl:for-each>
-                                </select>
-                            </div>
-                            <button type="submit">Noten abfragen</button>
-                        </form>
-
-                    </div>
+        <h1>Feature Notenauswertung</h1>
+        <div class="block">
+            <p>
+                <i>SchülerIn auswählen:</i>
+            </p>
+            <form action="insertPupil.php" method="post">
+                <div>
+                    <label for="class">SchülerIn</label>
+                    <select name="class" id="class-input">
+                        <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/SchülerIn/Name[generate-id()
+                            = generate-id(key('xxx',.)[1])]">
+                            <option>
+                                <xsl:value-of select="."/> 											
+                            </option>
+                        </xsl:for-each>
+                    </select>
                 </div>
-            </body>
-        </html>
+                <button type="submit">Noten abfragen</button>
+            </form>
+        </div>
     </xsl:template>
 <!--
     <xsl:template match="SchülerIn">

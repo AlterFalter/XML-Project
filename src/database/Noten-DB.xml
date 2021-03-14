@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="Noten-DB.xsl"?>
-<Prüfungen>
+<Prüfungen xsi:noNamespaceSchemaLocation="Noten-DB.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prüfung Datum="2021-01-01" Name="Addieren 1" Fach="Mathematik" Klasse="1A">
     <SchülerIn>
       <Name>Karin Mustermann</Name>

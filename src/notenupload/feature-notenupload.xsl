@@ -21,14 +21,14 @@
         <!-- title and nav  -->
         <h1>Feature Noten Upload</h1>
         <div>
-            <div class="notenuploadblock">
+            <div class="block">
                 <h5>1. Noten.xml herunterladen</h5>
                 <p>
                     <i>Hier können Sie eine Musterdatei "Noten.xml" herunterladen, um darin die Noten einer Prüfung einzutragen.</i>
                 </p>
                 <a href="Noten.xml" download="Noten.xml">Download</a>
             </div>
-            <div class="notenuploadblock">
+            <div class="block">
                 <h5>2. Noten.xml hochladen</h5>
                 <p>
                     <i>Die ausgefüllte Datei können Sie anschliessen wieder hier hochladen.</i>
