@@ -35,6 +35,9 @@
                         <h2>Auswahl:</h2>
 						
 						<p>
+						    <a href="feature-notentabelle.xml">Notentabelle anzeigen</a>
+						</p>
+						<p>
 						    <a href="feature-verteilung.xml">Die Notenverteilung einer Prüfung abfragen</a>
 						</p>
 						<p>

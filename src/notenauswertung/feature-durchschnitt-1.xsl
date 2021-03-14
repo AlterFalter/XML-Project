@@ -5,10 +5,9 @@
 >
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
-
-    <xsl:key name="xxx" match="/Prüfungen/Prüfung/SchülerIn/Name" use="." />
 	
 	<xsl:variable name="class" select="document('selectedClass.xml')/selectedClass/text()" />
+	<xsl:variable name="pupils" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/SchülerIn/Name" />
 
     <xsl:template match="menu">
         <html>
@@ -45,11 +44,12 @@
                             <div>
                                 <label for="class">SchülerIn</label>
                                 <select name="class" id="class-input">
-                                    <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/SchülerIn/Name[generate-id()
-                                       = generate-id(key('xxx',.)[1])]">
+                                    <xsl:for-each select="$pupils">
+										<xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
 					                    <option>
 						                    <xsl:value-of select="."/> 											
 					                    </option>
+										</xsl:if>
 				                    </xsl:for-each>
                                 </select>
                             </div>
