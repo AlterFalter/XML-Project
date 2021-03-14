@@ -1,6 +1,15 @@
 <?php
 
 ////////////////////////////////
+// Step #0: Preparation
+////////////////////////////////
+
+require_once 'stundenplan-client/stundenplan_client.php';
+
+$stundenplanClient = new StundenplanClient();
+$stundenplanClient->tempSaveSelectedClass();
+
+////////////////////////////////
 // Step #1: create FO
 ////////////////////////////////
 
@@ -11,13 +20,13 @@
  */
 
 // load XML
-$data = file_get_contents('../fo.xml');
+$data = file_get_contents('fo/fo.xml');
 $xml = new DOMDocument();
 $xml->loadXML($data);
 
 // load XSL
 $xsl = new DOMDocument();
-$xsl->load('fo.xsl');
+$xsl->load('fo/fo.xsl');
 
 // transform
 $processor = new XSLTProcessor();
@@ -25,7 +34,7 @@ $processor->importStylesheet($xsl);
 $dom = $processor->transformToDoc($xml);
 
 // save result as FO file
-$foFile = 'generated.fo';
+$foFile = 'fo/generated.fo';
 file_put_contents($foFile, $dom->saveXML());
 
 ////////////////////////////////
@@ -33,18 +42,18 @@ file_put_contents($foFile, $dom->saveXML());
 ////////////////////////////////
 
 // load the FOP client.
-require_once 'fop-client/fop_service_client.php';
+require_once 'fo/fop-client/fop_service_client.php';
 
 // locate the source FO file.
-$foFile = 'generated.fo';
+$foFile = 'fo/generated.fo';
 
 // create an instance of the FOP client and perform service request.
 $serviceClient = new FOPServiceClient();
 $pdfFile = $serviceClient->processFile($foFile);
-$pdfLink = sprintf ("download.php?file=%s", $serviceClient->encodeFilename($pdfFile));
 
-// generate HTML output and show results of service request
-echo sprintf('<p>Successfully rendered FO File<br><strong><a href="%s">%s</a></strong></p>', $foFile, $foFile);
-echo sprintf('<p>Generated PDF:<br><strong><a href="%s">download PDF</a></strong></p>', $pdfLink);
+header ("Content-Type: ".filetype($pdfFile));
+header ("Content-Length: ".filesize($pdfFile));
+header ("Content-Disposition: attachment; filename=Stundenplan");
+readfile($pdfFile);
 
 ?>
