@@ -1,9 +1,40 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="welcome.xsl"?>
 <menu>
-    <item>
-        <text>Home</text>
-        <link>index.xml</link>
-        <index>0</index>
-    </item>
+    <navigationItems>
+        <item>
+            <text>Home</text>
+            <url>../welcome/welcome.xml</url>
+        </item>
+        <item>
+            <text>Stundenplan</text>
+            <url>../stundenplan/feature-stundenplan.xml</url>
+        </item>
+        <item>
+            <text>Noten hochladen</text>
+            <url>../notenupload/feature-notenupload.xml</url>
+        </item>
+        <item>
+            <text>Notenauswertung</text>
+            <url>../notenauswertung/feature-notenauswertung.xml</url>
+        </item>
+    </navigationItems>
+    <links>
+        <link>
+            <text>Informationen zu BILIAS</text>
+            <url>../about/about.xml</url>
+        </link>
+        <link>
+            <text>Source Code</text>
+            <url>https://github.com/AlterFalter/XML-Project</url>
+        </link>
+        <link>
+            <text>Noten Datenbank</text>
+            <url>../database/Noten-DB.xml</url>
+        </link>
+        <link>
+            <text>Stundenplan Datenbank</text>
+            <url>../database/stundenplan.xml</url>
+        </link>
+    </links>
 </menu>

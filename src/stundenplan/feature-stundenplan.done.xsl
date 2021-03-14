@@ -11,33 +11,19 @@
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="feature"/>
+                <div id="content" class="container">
+                    <xsl:apply-templates select="feature"/>
+                </div>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="feature">
-        <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-            </head>
-            <body>
-
-                <!-- Title and nav  -->
-
-                <h1>Feature Stundenplan</h1>
-
-                <div class="content">
-                    <div>
-                        <p>
-                            <i>Stundenplan erfolgreich updated!</i>
-                        </p>
-                    </div>
-                </div>
-            </body>
-        </html>
+        <h2>Feature Stundenplan</h2>
+        <p>
+            <i>Stundenplan erfolgreich updated!</i>
+        </p>
     </xsl:template>
 
 </xsl:stylesheet>

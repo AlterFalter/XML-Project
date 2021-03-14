@@ -13,42 +13,24 @@
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="feature"/>
+                <div id="content" class="container">
+                    <xsl:apply-templates select="feature"/>
+                </div>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="feature">
-        <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-            </head>
-            <body>
+        <h2>Feature Notenauswertung</h2>
+        <div class="block">
+            <p>
+                <h5>Notenverteilung von Prüfung <xsl:value-of select="$selectedExam" /></h5>
+            </p>
 
-                <!-- Title and nav  -->
+            <xsl:call-template name="bars"></xsl:call-template>
 
-                <h1>Feature Notenauswertung</h1>
-
-                <div class="content">
-
-                    <div>
-                        <p>
-                            <h2>Notenverteilung von Prüfung 
-							<xsl:value-of select="$selectedExam" />
-							</h2>
-                        </p>
-
-						<xsl:call-template name="bars">
-                        </xsl:call-template>
-
-                    </div>
-
-                </div>
-
-            </body>
-        </html>
+        </div>
     </xsl:template>
 	
 	<xsl:variable name="numberOf_1.0" select="count(document('../database/Noten-DB.xml')/Prüfungen/Prüfung/SchülerIn[../@Name=$selectedExam and Note='1.0'])" />
