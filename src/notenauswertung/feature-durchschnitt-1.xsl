@@ -24,7 +24,7 @@
     </xsl:template>
 
     <xsl:template match="feature">
-        <h1>Feature Notenauswertung</h1>
+        <h2>Feature Notenauswertung</h2>
         <div class="block">
             <p>
                 <i>SchülerIn auswählen:</i>

@@ -20,7 +20,7 @@
     </xsl:template>
 
     <xsl:template match="feature">
-        <h1>Feature Stundenplan</h1>
+        <h2>Feature Stundenplan</h2>
         <div>
             <div>
                 <p>
@@ -35,7 +35,7 @@
 
     <xsl:template match="Stundenplan">
         <div class="block">
-            <h1>Klasse <xsl:value-of select="@Klasse"/></h1>
+            <h2>Klasse <xsl:value-of select="@Klasse"/></h2>
             <table>
                 <tr>
                     <th class="firstColumn">Zeit</th>

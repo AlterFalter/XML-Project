@@ -18,7 +18,7 @@
     </xsl:template>
 
     <xsl:template match="feature">
-        <h1>Feature Notenauswertung</h1>
+        <h2>Feature Notenauswertung</h2>
         <div class="block">
             <p>
                 <a href="feature-verteilung.xml">Die Notenverteilung einer Prüfung abfragen</a>

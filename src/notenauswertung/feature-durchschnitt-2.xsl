@@ -22,7 +22,7 @@
     </xsl:template>
 
     <xsl:template match="feature">
-        <h1>Feature Notenauswertung</h1>
+        <h2>Feature Notenauswertung</h2>
         <!-- load data from DB and render  -->
         <div class="block">
             <p>

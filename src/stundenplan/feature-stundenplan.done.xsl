@@ -20,7 +20,7 @@
     </xsl:template>
 
     <xsl:template match="feature">
-        <h1>Feature Stundenplan</h1>
+        <h2>Feature Stundenplan</h2>
         <p>
             <i>Stundenplan erfolgreich updated!</i>
         </p>
