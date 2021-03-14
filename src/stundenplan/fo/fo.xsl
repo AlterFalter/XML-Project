@@ -43,7 +43,7 @@
             <fo:table-column column-number="5" column-width="18%" border-style="solid" border-width="1pt"/>
             <fo:table-column column-number="6" column-width="18%" border-style="solid" border-width="1pt"/>
 
-            <fo:table-header background-color="red" font-size="14pt">
+            <fo:table-header background-color="skyblue" font-size="14pt">
                 <fo:table-row>
                     <fo:table-cell column-number="1" display-align="center" padding-top="5pt" padding-bottom="5pt">
                         <fo:block text-align="center">
@@ -78,7 +78,7 @@
                 </fo:table-row>
             </fo:table-header>
 
-            <fo:table-footer background-color="red">
+            <fo:table-footer background-color="skyblue">
                 <fo:table-row>
                     <fo:table-cell number-columns-spanned="6" height="10pt">
                         <fo:block></fo:block>
@@ -86,7 +86,7 @@
                 </fo:table-row>
             </fo:table-footer>
 
-            <fo:table-body>
+            <fo:table-body background-color="lightcyan">
                 <xsl:call-template name="add_row">
                     <xsl:with-param name="time">8:15 - 9:45</xsl:with-param>
                 </xsl:call-template>
@@ -94,7 +94,7 @@
                     <xsl:with-param name="time">10:15 - 11:45</xsl:with-param>
                 </xsl:call-template>
 
-                <fo:table-row border-style="solid" border-width="1pt" background-color="lightgrey">
+                <fo:table-row border-style="solid" border-width="1pt" background-color="azure">
                     <fo:table-cell column-number="1" number-columns-spanned="6" display-align="center" padding-top="5pt" padding-bottom="5pt">
                         <fo:block text-align="center">
                             Mittag

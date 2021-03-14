@@ -51,6 +51,7 @@ nav a:hover {
 }
 #content {
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 label {
     min-width: 100px;
@@ -62,13 +63,39 @@ button {
     margin-top: 10px;
     margin-left: 110px;
 }
+.stundenplanbuttons button {
+    margin-left: 10px;
+}
+.stundenplanbuttons form {
+    display: inline;
+}
+.stundenplanblock {
+    margin-top: 30px;
+}
+table {
+    width: 100%;
+}
 table, th, td {
     border: 3px solid black;
 }
-
 th, td {
-    min-width:300px;
     text-align:center;
+}
+th {
+    background-color: skyblue;
+}
+td {
+    background-color: lightcyan;
+    padding: 10px;
+}
+td p {
+    margin: 0px;
+}
+.firstColumn {
+    width: 10%;
+}
+.column {
+    width: 18%;
 }
 dl, ol, ul {
     margin: 0px;
