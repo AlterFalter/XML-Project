@@ -127,4 +127,22 @@
       <Note>5.0</Note>
     </SchülerIn>
   </Prüfung>
+  <Prüfung Datum="2021-01-01" Name="Addieren 4" Fach="Mathematik" Klasse="5A">
+    <SchülerIn>
+        <Name>Karin Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Reto Mustermann</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Nicole Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+    <SchülerIn>
+        <Name>Michael Doe</Name>
+        <Note>5.0</Note>
+    </SchülerIn>
+</Prüfung>
 </Prüfungen>

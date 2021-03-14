@@ -3,7 +3,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
-
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
@@ -16,10 +15,12 @@
             </body>
         </html>
     </xsl:template>
-
     <xsl:template match="feature">
         <h2>Feature Notenauswertung</h2>
         <div class="block">
+            <p>
+						    <a href="feature-notentabelle.xml">Notentabelle anzeigen</a>
+						</p>
             <p>
                 <a href="feature-verteilung.xml">Die Notenverteilung einer Prüfung abfragen</a>
             </p>
@@ -31,5 +32,4 @@
             </p>
         </div>
     </xsl:template>
-
 </xsl:stylesheet>

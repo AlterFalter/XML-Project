@@ -3,11 +3,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
-
-    <xsl:variable name="selectedPupil" select="document('selectedPupil.xml')/selectedPupil/text()"/>
-	
-	<xsl:key name="fach-key" match="/Prüfungen/Prüfung/@Fach" use="." />
-
+    <xsl:variable name="class" select="document('selectedClass.xml')/selectedClass/text()"/>
+	<xsl:variable name="pupil" select="document('selectedPupil.xml')/selectedPupil/text()"/>
+	<xsl:variable name="subjects" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class and SchülerIn/Name=$pupil]/@Fach" />
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
@@ -20,7 +18,6 @@
             </body>
         </html>
     </xsl:template>
-
     <xsl:template match="feature">
         <h2>Feature Notenauswertung</h2>
         <!-- load data from DB and render  -->
@@ -30,21 +27,20 @@
             </p>
             <div>
                 <table class="notendurchschnitt">
-                    <xsl:for-each select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung/@Fach[generate-id()
-                                            = generate-id(key('fach-key',.)[1])]">
-                        <tr>
-                            <td class="firstColumn"><xsl:value-of select="."/>: </td>
-                            <xsl:variable name="fach" select="."/>
-                            <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Fach=$fach]/Note)"/></td>
-                        </tr>
+                    <xsl:for-each select="$subjects">
+										    <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
+                            <tr>
+                                <td class="firstColumn"><xsl:value-of select="."/>: </td>
+                                <xsl:variable name="subject" select="."/>
+                                <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$pupil and ../@Klasse=$class and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$pupil and ../@Klasse=$class and ../@Fach=$subject]/Note)"/></td>
+                            </tr>
+                        </xsl:if>
                     </xsl:for-each>
                 </table>
             </div>
         </div>
     </xsl:template>
-
     <xsl:template match="Prüfung">
         <xsl:value-of select="@Fach"/>
-    </xsl:template>       
-
+    </xsl:template>
 </xsl:stylesheet>
