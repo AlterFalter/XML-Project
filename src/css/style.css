@@ -40,6 +40,11 @@ nav a {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+@media screen and (max-width: 768px) {
+    nav a {
+        border-right: none;
+    }
+}
 nav a:last-child {
     border-right: none;
 }
