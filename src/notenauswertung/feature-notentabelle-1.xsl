@@ -43,9 +43,7 @@
 				<div>
 					<label for="class">Klasse</label>
 					<select name="class" id="class-input" style="width:150px">
-						<option>
-										Alle       
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$classes">
 							<xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
 								<xsl:if test=". = $selectedClass">
@@ -66,9 +64,7 @@
 				<div>
 					<label for="subject">Fach</label>
 					<select name="subject" id="class-input" style="width:150px">
-						<option>
-										Alle 
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$subjects">
 							<xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
 								<xsl:if test=". = $selectedSubject">
@@ -90,9 +86,7 @@
 				<div>
 					<label for="exam">Prüfung</label>
 					<select name="exam" id="class-input" style="width:150px">
-						<option>
-										Alle 
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$exams">
 							<xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
 								<xsl:if test=". = $selectedExam">
@@ -113,9 +107,7 @@
 				<div>
 					<label for="date">Datum</label>
 					<select name="date" id="class-input" style="width:150px">
-						<option>
-										Alle 
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$dates">
 							<xsl:if test="generate-id() = generate-id($dates[. = current()][1])">
 								<xsl:if test=". = $selectedDate">
@@ -136,9 +128,7 @@
 				<div>
 					<label for="pupil">SchülerIn</label>
 					<select name="pupil" id="class-input" style="width:150px">
-						<option>
-										Alle 
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$pupils">
 							<xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
 								<xsl:if test=". = $selectedPupil">
@@ -159,9 +149,7 @@
 				<div>
 					<label for="grade">Note</label>
 					<select name="grade" id="class-input" style="width:150px">
-						<option>
-										Alle 
-						</option>
+						<option value="@*">Alle</option>
 						<xsl:for-each select="$grades">
 							<xsl:if test="generate-id() = generate-id($grades[. = current()][1])">
 								<xsl:if test=". = $selectedGrade">
@@ -195,72 +183,6 @@
 
 	<xsl:template match="Prüfungen">
 
-		<xsl:variable name="selectedClass2">
-			<xsl:choose>
-				<xsl:when test="$selectedClass='Alle'">
-					<xsl:value-of select="@*"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$selectedClass"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="selectedSubject2">
-			<xsl:choose>
-				<xsl:when test="$selectedSubject='Alle'">
-					<xsl:value-of select="@*"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$selectedSubject"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="selectedExam2">
-			<xsl:choose>
-				<xsl:when test="$selectedExam='Alle'">
-					<xsl:value-of select="@*"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$selectedExam"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="selectedDate2">
-			<xsl:choose>
-				<xsl:when test="$selectedDate='Alle'">
-					<xsl:value-of select="@*"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="$selectedDate"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="selectedPupil2">
-			<xsl:choose>
-				<xsl:when test="$selectedPupil!='Alle'">
-					<xsl:value-of select="$selectedPupil"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="@*"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
-		<xsl:variable name="selectedGrade2">
-			<xsl:choose>
-				<xsl:when test="$selectedGrade!='Alle'">
-					<xsl:value-of select="$selectedGrade"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="@*"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-
 		<table border="1">
 			<th>Klasse</th>
 			<th>Fach</th>
@@ -268,7 +190,7 @@
 			<th>Datum</th>
 			<th>SchülerIn</th>
 			<th>Note</th>
-			<xsl:apply-templates select="Prüfung[contains(@Klasse, $selectedClass2) and contains(@Fach, $selectedSubject2) and contains(@Name, $selectedExam2) and contains(@Datum, $selectedDate2)]/SchülerIn[contains(Name, $selectedPupil2) and contains(Note, $selectedGrade2)]"/>
+			<xsl:apply-templates select="Prüfung[contains(@Klasse, $selectedClass) and contains(@Fach, $selectedSubject) and contains(@Name, $selectedExam) and contains(@Datum, $selectedDate)]/SchülerIn[contains(Name, $selectedPupil) and contains(Note, $selectedGrade)]"/>
 		</table>
 
 	</xsl:template>
