@@ -11,55 +11,39 @@
             <xsl:copy-of select="document('../layout/head.html')"/>
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
-                <xsl:apply-templates select="feature"/>
+                <div id="content" class="container">
+                    <xsl:apply-templates select="feature"/>
+                </div>
                 <xsl:copy-of select="document('../layout/footer.html')"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="feature">
-        <html>
-            <head>
-                <title>Schule Hinterwald Reloaded</title>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-            </head>
-            <body>
-
-                <!-- Title and nav  -->
-
-                <h1>Feature Stundenplan</h1>
-
-                <div class="content">
-
-                    <div>
-                        <p>
-                            <i>Stundenpläne erstellen oder bearbeiten:</i>
-                        </p>
-
-                        <!-- Stundenpläne-->
-                        <div>
-                            <xsl:apply-templates select="document('../database/stundenplan.xml')/Stundenpläne/Stundenplan" />
-                        </div>
-
-                    </div>
+        <h1>Feature Stundenplan</h1>
+        <div>
+            <div>
+                <p>
+                    <i>Stundenpläne erstellen oder bearbeiten:</i>
+                </p>
+                <div>
+                    <xsl:apply-templates select="document('../database/stundenplan.xml')/Stundenpläne/Stundenplan" />
                 </div>
-            </body>
-        </html>
+            </div>
+        </div>
     </xsl:template>
 
     <xsl:template match="Stundenplan">
-        <div>
-            <p>
-                <h1>Klasse: <xsl:value-of select="@Klasse"/></h1>
-            </p>
+        <div class="stundenplanblock">
+            <h1>Klasse <xsl:value-of select="@Klasse"/></h1>
             <table>
                 <tr>
-                    <th>Zeit</th>
-                    <th>Montag</th>
-                    <th>Dienstag</th>
-                    <th>Mittwoch</th>
-                    <th>Donnerstag</th>
-                    <th>Freitag</th>
+                    <th class="firstColumn">Zeit</th>
+                    <th class="column">Montag</th>
+                    <th class="column">Dienstag</th>
+                    <th class="column">Mittwoch</th>
+                    <th class="column">Donnerstag</th>
+                    <th class="column">Freitag</th>
                 </tr>          
 
                 <xsl:call-template name="add_row">
@@ -88,7 +72,7 @@
                 </xsl:call-template>
             </table>
 
-            <div>
+            <div class="stundenplanbuttons">
                 <xsl:variable name="class" select="@Klasse" />
                 <form action="edit.php" method="post">
                     <input type="hidden" name="class" id="class-input" value="{$class}"/>
