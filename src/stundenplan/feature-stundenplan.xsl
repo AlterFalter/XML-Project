@@ -54,30 +54,22 @@
             </p>
             <table>
                 <tr>
-                    <th>Blöcke</th>
-                    <!--<xsl:apply-templates select="document('../database/stundenplan.xml')/Stundenpläne/Konfiguration/Tage" />-->
+                    <th>Zeit</th>
                     <th>Montag</th>
                     <th>Dienstag</th>
                     <th>Mittwoch</th>
                     <th>Donnerstag</th>
                     <th>Freitag</th>
                 </tr>          
-                <tr>
-                    <td>8:15 - 9:45</td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='8:15 - 9:45' and Tag/text()='Montag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='8:15 - 9:45' and Tag/text()='Dienstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='8:15 - 9:45' and Tag/text()='Mittwoch']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='8:15 - 9:45' and Tag/text()='Donnerstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='8:15 - 9:45' and Tag/text()='Freitag']" /></td>
-                </tr>
-                <tr>
-                    <td>10:15 - 11:45</td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='10:15 - 11:45' and Tag/text()='Montag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='10:15 - 11:45' and Tag/text()='Dienstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='10:15 - 11:45' and Tag/text()='Mittwoch']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='10:15 - 11:45' and Tag/text()='Donnerstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='10:15 - 11:45' and Tag/text()='Freitag']" /></td>
-                </tr>
+
+                <xsl:call-template name="add_row">
+                    <xsl:with-param name="time">8:15 - 9:45</xsl:with-param>
+                </xsl:call-template>
+
+                <xsl:call-template name="add_row">
+                    <xsl:with-param name="time">10:15 - 11:45</xsl:with-param>
+                </xsl:call-template>
+
                 <tr>
                     <td>Mittag</td>
                     <td></td>
@@ -86,26 +78,19 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td>13:15 - 14:45</td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='13:15 - 14:45' and Tag/text()='Montag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='13:15 - 14:45' and Tag/text()='Dienstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='13:15 - 14:45' and Tag/text()='Mittwoch']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='13:15 - 14:45' and Tag/text()='Donnerstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='13:15 - 14:45' and Tag/text()='Freitag']" /></td>
-                </tr>
-                <tr>
-                    <td>15:00 - 16:30</td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Montag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Dienstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Mittwoch']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Donnerstag']" /></td>
-                    <td><xsl:apply-templates select="Block[Zeit/text()='15:00 - 16:30' and Tag/text()='Freitag']" /></td>
-                </tr>
+
+                <xsl:call-template name="add_row">
+                    <xsl:with-param name="time">13:15 - 14:45</xsl:with-param>
+                </xsl:call-template>
+
+                <xsl:call-template name="add_row">
+                    <xsl:with-param name="time">15:00 - 16:30</xsl:with-param>
+                </xsl:call-template>
             </table>
+
             <div>
                 <xsl:variable name="class" select="@Klasse" />
-                <form action="editStundenplan.php" method="post">
+                <form action="edit.php" method="post">
                     <input type="hidden" name="class" id="class-input" value="{$class}"/>
                     <button type="submit" value="submit">Stundenplan bearbeiten</button>
                 </form>
@@ -115,6 +100,18 @@
                 </form>
             </div>
         </div>
+    </xsl:template>
+
+    <xsl:template name="add_row">
+        <xsl:param name="time" />
+        <tr>
+            <td><xsl:value-of select="$time" /></td>
+            <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Montag']" /></td>
+            <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Dienstag']" /></td>
+            <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Mittwoch']" /></td>
+            <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Donnerstag']" /></td>
+            <td><xsl:apply-templates select="Block[Zeit/text()=$time and Tag/text()='Freitag']" /></td>
+        </tr>
     </xsl:template>
 
     <xsl:template match="Block">
