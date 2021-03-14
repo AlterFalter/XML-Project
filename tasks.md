@@ -6,7 +6,7 @@
 | JQuery hinzufügen | Done | Yannis | JS | |
 | Server setup | | | Linux | Setup server with PHP. Use the tutorial from the professor! |
 | Standard Layout erstellen | Done | Yannis | XHTML, CSS | Header, Navigation und Footer erstellen, [Vergleiche](http://mmt.ximit.ch/sushi/index.XHTML) |
-| Standard Layout überall einfügen | In Progress | Roger, Yannis | XHTML | |
+| Standard Layout überall einfügen | Done | Roger, Yannis | XHTML | |
 | Noten XML erstellen | Done | Beat | XML | XML-Schema, 2 Beispiel Datenset erstellen, XML-Daten werden einfach am Ende angefügt |
 | Noten als Tabelle darstellen | |  | XHTML, CSS | |
 | Noten Filter erstellen | |  | XHTML, CSS, JS, XPath | Dropdown pro Spalte mit allen Werten, nach Schüler, Fach/Modul, Prüfung |
@@ -19,7 +19,7 @@
 | Stundenplan Erfassung (speichern) | Done | Roger | PHP, XML |  |
 | Stundenplan PDF Export | Done | Roger | PHP, FO | |
 | Stundenplan PDF Link einfügen |  Done | Roger | XHTML, | |
-| Index Seite | Review | Yannis | XHTML, CSS, (JS) | |
-| About Seite | Review | Yannis | XHTML, CSS | |
+| Index Seite | Done | Yannis | XHTML, CSS, (JS) | |
+| About Seite | Done | Yannis | XHTML, CSS | |
 | neue Noten überschreiben alte Noten | | | PHP, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
 | Server final upload | | Beat, Roger, Yannis | Git, PHP | Upload the final version of the code to the server and test all of the functionality. |
