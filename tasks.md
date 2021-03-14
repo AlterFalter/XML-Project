@@ -17,8 +17,8 @@
 | Stundenplan Schema erstellen | Done | Roger | XML | pro Klasse gematched |
 | Stundenplan Erfassung (Seite, Validierung) | Done | Roger | XHTML, CSS, JS |  |
 | Stundenplan Erfassung (speichern) | Done | Roger | PHP, XML |  |
-| Stundenplan PDF Export | In Progress | Roger | PHP, FO | |
-| Stundenplan PDF Link einfügen |  In Progress | Roger | XHTML, | |
+| Stundenplan PDF Export | Done | Roger | PHP, FO | |
+| Stundenplan PDF Link einfügen |  Done | Roger | XHTML, | |
 | Index Seite | Review | Yannis | XHTML, CSS, (JS) | |
 | About Seite | Review | Yannis | XHTML, CSS | |
 | neue Noten überschreiben alte Noten | | | PHP, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
