@@ -19,8 +19,8 @@
         <h2>Feature Notenauswertung</h2>
         <div class="block">
             <p>
-						    <a href="feature-notentabelle.xml">Notentabelle anzeigen</a>
-						</p>
+                <a href="feature-notentabelle.xml">Notentabelle anzeigen</a>
+            </p>
             <p>
                 <a href="feature-verteilung.xml">Die Notenverteilung einer Prüfung abfragen</a>
             </p>
