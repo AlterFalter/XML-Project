@@ -35,7 +35,9 @@
                 </p>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     <span>Bitte die Datei zum Hochladen auswählen: </span>
+                    <br />
                     <input type="file" name="fileToUpload" id="fileToUpload"/>
+                    <br />
                     <button type="submit" name="submit">Datei hochladen</button>
                 </form>
             </div>
