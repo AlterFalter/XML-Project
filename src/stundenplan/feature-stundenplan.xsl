@@ -71,11 +71,11 @@
             <div class="stundenplanbuttons">
                 <xsl:variable name="class" select="@Klasse" />
                 <form action="edit.php" method="post">
-                    <input type="hidden" name="class" id="class-input" value="{$class}"/>
+                    <input type="hidden" name="class" value="{$class}"/>
                     <button type="submit" value="submit">Stundenplan bearbeiten</button>
                 </form>
                 <form action="pdf.php" method="post">
-                    <input type="hidden" name="class" id="class-input" value="{$class}"/>
+                    <input type="hidden" name="class" value="{$class}"/>
                     <button type="submit" value="submit">Stundenplan herunterladen (PDF)</button>
                 </form>
             </div>

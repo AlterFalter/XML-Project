@@ -26,7 +26,7 @@
             <form action="insertClass2.php" method="post">
                 <div>
                     <label for="class">Klasse</label>
-                    <select name="class" id="class-input">
+                    <select name="class">
                         <xsl:for-each select="$classes">
                             <xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
                                 <option>

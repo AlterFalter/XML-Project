@@ -29,14 +29,14 @@
             <form action="insertSubject.php" method="post">
                 <div>
                     <label for="class">Fach</label>
-                    <select name="class" id="class-input">
+                    <select name="class">
                         <xsl:for-each select="$subjects">
                             <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/>
                                 </option>
                             </xsl:if>
-				                </xsl:for-each>
+				        </xsl:for-each>
                     </select>
                 </div>
                 <button type="submit">Noten abfragen</button>

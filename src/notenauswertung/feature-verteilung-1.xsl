@@ -27,14 +27,14 @@
             <form action="insertExam.php" method="post">
                 <div>
                     <label for="class">Prüfung</label>
-                    <select name="class" id="class-input">
+                    <select name="class">
                         <xsl:for-each select="$exams">
                             <xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/> 											
                                 </option>
                             </xsl:if>
-				                </xsl:for-each>
+				        </xsl:for-each>
                     </select>
                 </div>
                 <button type="submit">Notenverteilung abfragen</button>
