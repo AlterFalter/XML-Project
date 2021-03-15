@@ -23,7 +23,7 @@
         <!-- load data from DB and render  -->
         <div class="block">
             <p>
-                <h5>Notendurchschnitt von <xsl:value-of select="$selectedPupil" /></h5>
+                <h3>Notendurchschnitt von <xsl:value-of select="$selectedPupil" /></h3>
             </p>
             <div>
                 <table class="notendurchschnitt">

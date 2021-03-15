@@ -25,7 +25,7 @@
         <h2>Feature Notenauswertung</h2>
         <div class="block">
             <p>
-                <h5>Notenverteilung von Prüfung <xsl:value-of select="$selectedExam" /></h5>
+                <h3>Notenverteilung von Prüfung <xsl:value-of select="$selectedExam" /></h3>
             </p>
 
             <xsl:call-template name="bars"></xsl:call-template>

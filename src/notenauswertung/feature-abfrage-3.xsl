@@ -28,7 +28,7 @@
 		<h2>Feature Notenauswertung</h2>
 		<div class="block">
 			<p>
-				<h5>Prüfungsnoten von <xsl:value-of select="$selectedPupil" /> im Fach <xsl:value-of select="$selectedSubject" /></h5>
+				<h3>Prüfungsnoten von <xsl:value-of select="$selectedPupil" /> im Fach <xsl:value-of select="$selectedSubject" /></h3>
 			</p>
 
 			<xsl:call-template name="bars"></xsl:call-template>

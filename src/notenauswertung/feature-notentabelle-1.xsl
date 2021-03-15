@@ -38,7 +38,7 @@
 	<xsl:template match="feature">
 		<h2>Feature Notenauswertung</h2>
 		<div class="block">
-			<h5>Notentabelle</h5>
+			<h3>Notentabelle</h3>
 			<form action="insertData.php" method="post">
 				<div>
 					<label for="class">Klasse</label>
