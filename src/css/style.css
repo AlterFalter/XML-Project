@@ -67,11 +67,31 @@ label {
     font-weight: bold;
     white-space: nowrap;
 }
-button {
-    margin-top: 10px;
-    margin-left: 110px;
+select {
+    min-width: 80px;
 }
-.stundenplanbuttons button {
+button, input[type=button], input[type="file"] {
+    min-width: 150px;
+}
+button, input[type=button] {
+    background-color: var(--light-grey);
+    border: 1px var(--blue) solid;
+    color: var(--blue);
+    margin-top: 10px;
+    
+}
+button:hover, input[type=button]:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: white;
+}
+input[type="file"] {
+    min-width: 300px;
+}
+.class-input {
+    min-width: 150px;
+}
+.stundenplanbuttons form:nth-child(2n) button {
     margin-left: 10px;
 }
 .stundenplanbuttons form {
@@ -84,16 +104,22 @@ table {
     width: 100%;
 }
 table, th, td {
-    border: 3px solid black;
+    border: 3px solid var(--blue);
 }
 th, td {
     text-align:center;
 }
 th {
-    background-color: skyblue;
+    background-color: var(--blue);
+    color: white;
+}
+tr {
+    background-color: white;
+}
+tr:nth-child(2n) {
+    background-color: var(--light-grey);
 }
 td {
-    background-color: lightcyan;
     padding: 10px;
 }
 td p {

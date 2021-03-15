@@ -42,7 +42,7 @@
 			<form action="insertData.php" method="post">
 				<div>
 					<label for="class">Klasse</label>
-					<select name="class" id="class-input" style="width:150px">
+					<select name="class" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$classes">
 							<xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
@@ -65,7 +65,7 @@
 				</div>
 				<div>
 					<label for="subject">Fach</label>
-					<select name="subject" id="class-input" style="width:150px">
+					<select name="subject" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$subjects">
 							<xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
@@ -89,7 +89,7 @@
 
 				<div>
 					<label for="exam">Prüfung</label>
-					<select name="exam" id="class-input" style="width:150px">
+					<select name="exam" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$exams">
 							<xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
@@ -112,7 +112,7 @@
 				</div>
 				<div>
 					<label for="date">Datum</label>
-					<select name="date" id="class-input" style="width:150px">
+					<select name="date" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$dates">
 							<xsl:if test="generate-id() = generate-id($dates[. = current()][1])">
@@ -135,7 +135,7 @@
 				</div>
 				<div>
 					<label for="pupil">SchülerIn</label>
-					<select name="pupil" id="class-input" style="width:150px">
+					<select name="pupil" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$pupils">
 							<xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
@@ -158,7 +158,7 @@
 				</div>
 				<div>
 					<label for="grade">Note</label>
-					<select name="grade" id="class-input" style="width:150px">
+					<select name="grade" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$grades">
 							<xsl:if test="generate-id() = generate-id($grades[. = current()][1])">

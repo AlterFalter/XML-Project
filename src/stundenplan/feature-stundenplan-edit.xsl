@@ -60,7 +60,7 @@
                     <label for="room">Raum:</label>
                     <input type="text" name="room" id="room-input" placeholder="Raum 10A..." required="true"/>
                 </div>
-                <input type="hidden" name="class" id="class-input" value="{$class}"/>
+                <input type="hidden" name="class" value="{$class}"/>
                 <button type="submit" value="submit">Hinzufügen</button>
             </form>
         </div>
