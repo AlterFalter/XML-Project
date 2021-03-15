@@ -104,16 +104,22 @@ table {
     width: 100%;
 }
 table, th, td {
-    border: 3px solid black;
+    border: 3px solid var(--blue);
 }
 th, td {
     text-align:center;
 }
 th {
-    background-color: skyblue;
+    background-color: var(--blue);
+    color: white;
+}
+tr {
+    background-color: white;
+}
+tr:nth-child(2n) {
+    background-color: var(--light-grey);
 }
 td {
-    background-color: lightcyan;
     padding: 10px;
 }
 td p {
