@@ -45,10 +45,23 @@ $foFile = 'fo/generated.fo';
 $serviceClient = new FOPServiceClient();
 $pdfFile = $serviceClient->processFile($foFile);
 
-header ("Content-Type: ".filetype($pdfFile));
+header('Content-Description: File Transfer');
+header('Content-Type: application/octet-stream');
+#header('Content-Disposition: attachment; filename=' . $this->fileName);
+header ("Content-Disposition: attachment; filename=Stundenplan" . $className . ".pdf");
+header('Content-Transfer-Encoding: binary');
+header('Expires: 0');
+header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+header('Pragma: public');
+# line from starterkit
+#header('Content-Length: ' . filesize($this->fileName));
+# our line
+#header ("Content-Type: ".filetype($pdfFile));
 header ("Content-Length: ".filesize($pdfFile));
 $className = $stundenplanClient->getClassName();
-header ("Content-Disposition: attachment; filename=Stundenplan" . $className . ".pdf");
+
+ob_clean();
+flush();
 readfile($pdfFile);
 
 ?>
