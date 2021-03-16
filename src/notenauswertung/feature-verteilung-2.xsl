@@ -65,7 +65,7 @@
 				<xsl:with-param name="grade">Note</xsl:with-param>
 				<xsl:with-param name="numberOf">
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 	
 			<xsl:call-template name="bar">
@@ -74,7 +74,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_1.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -83,7 +83,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_1.5" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -92,7 +92,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_2.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -101,7 +101,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_2.5" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -110,7 +110,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_3.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -119,7 +119,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_3.5" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -128,7 +128,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_4.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -137,7 +137,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_4.5" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -146,7 +146,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_5.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -155,7 +155,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_5.5" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -164,7 +164,7 @@
 				<xsl:with-param name="numberOf">
 					<xsl:value-of select="$numberOf_6.0" />
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 			
 			<xsl:call-template name="bar">
@@ -173,7 +173,7 @@
 				<xsl:with-param name="numberOf">
 					Anzahl Prüfungen mit dieser Note
 				</xsl:with-param>
-				<xsl:with-param name="color">green</xsl:with-param>
+				<xsl:with-param name="color">#007bff</xsl:with-param>
             </xsl:call-template>
 					
         </svg:svg>
@@ -187,7 +187,7 @@
 		<xsl:param name="numberOf" />
 		<xsl:param name="color" />
 
-        <xsl:variable name="x-offset" select="6 + ($position * 40)"/>
+        <xsl:variable name="x-offset" select="9 + ($position * 40)"/>
         <xsl:variable name="y-offset" select="$baseline"/>
         <xsl:variable name="y" select="$y-offset - $numberOf*10"/>
 
@@ -232,17 +232,24 @@
                 <xsl:value-of select="$x-offset"/>
             </xsl:attribute>
             <xsl:attribute name="y">
-                <xsl:value-of select="$y-offset - $numberOf*10"/>
+				<xsl:choose>
+					<xsl:when test="$numberOf = 0">
+						<xsl:value-of select="$y-offset - $numberOf*10 - 7" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$y-offset - $numberOf*10 + 2" />
+					</xsl:otherwise>
+				</xsl:choose>
             </xsl:attribute>
             <xsl:value-of select="$numberOf"/>
         </svg:text>
 
         <!-- bar legend -->
         <svg:text
-                fill="white"
+                fill="black"
         >
             <xsl:attribute name="x">
-                <xsl:value-of select="$x-offset - 7"/>
+                <xsl:value-of select="$x-offset - 10"/>
             </xsl:attribute>
             <xsl:attribute name="y">
                 <xsl:value-of select="$baseline + 25"/>
