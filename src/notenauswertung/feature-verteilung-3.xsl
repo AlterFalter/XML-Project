@@ -191,22 +191,22 @@
 				<!-- move to the lower left corner of the rectangle -->
 				<xsl:text>M </xsl:text>
 				<xsl:value-of select="$x-offset - 10" />
-				<xsl:text></xsl:text>
+				<xsl:text> </xsl:text>
 				<xsl:value-of select="$y-offset" />
 				<!-- draw line to the upper left corner of the rectangle -->
 				<xsl:text> L </xsl:text>
 				<xsl:value-of select="$x-offset - 10" />
-				<xsl:text></xsl:text>
+				<xsl:text> </xsl:text>
 				<xsl:value-of select="$y" />
 				<!-- draw line to the upper right corner of the rectangle -->
 				<xsl:text> L </xsl:text>
 				<xsl:value-of select="$x-offset + 10" />
-				<xsl:text></xsl:text>
+				<xsl:text> </xsl:text>
 				<xsl:value-of select="$y" />
 				<!-- draw line to the lower right corner of the rectangle -->
 				<xsl:text> L </xsl:text>
 				<xsl:value-of select="$x-offset + 10" />
-				<xsl:text></xsl:text>
+				<xsl:text> </xsl:text>
 				<xsl:value-of select="$y-offset" />
 				<!-- close path and fill the rectangle -->
 				<xsl:text> Z</xsl:text>
