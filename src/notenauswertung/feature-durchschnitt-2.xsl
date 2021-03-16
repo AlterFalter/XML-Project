@@ -33,7 +33,8 @@
                             <tr>
                                 <td class="firstColumn"><xsl:value-of select="."/>: </td>
 									<xsl:variable name="subject" select="."/>
-                                <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note)"/></td>
+									<xsl:variable name="grade" select="sum(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note)"/>
+                                <td class="column"><xsl:value-of select="round($grade * 10) div 10"/></td>
                             </tr>
                         </xsl:if>
                     </xsl:for-each>
