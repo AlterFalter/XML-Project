@@ -29,6 +29,7 @@
                     <label for="class">Prüfung</label>
                     <select name="class">
                         <xsl:for-each select="$exams">
+							<xsl:sort select="." data-type="text"/>
                             <xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/> 											

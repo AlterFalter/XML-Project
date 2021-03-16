@@ -31,6 +31,7 @@
                     <label for="class">Fach</label>
                     <select name="class">
                         <xsl:for-each select="$subjects">
+							<xsl:sort select="." data-type="text"/>
                             <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/>

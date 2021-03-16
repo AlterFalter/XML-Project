@@ -30,6 +30,7 @@
                     <label for="class">Klasse</label>
                     <select name="class">
                         <xsl:for-each select="$classes">
+							<xsl:sort select="." data-type="text"/>
                             <xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/> 											

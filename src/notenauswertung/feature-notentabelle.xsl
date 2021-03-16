@@ -38,6 +38,7 @@
 					<select name="class" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$classes">
+							<xsl:sort select="." data-type="text"/>
 							<xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -51,6 +52,7 @@
 					<select name="subject" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$subjects">
+							<xsl:sort select="." data-type="text"/>
 							<xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -65,6 +67,7 @@
 					<select name="exam" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$exams">
+							<xsl:sort select="." data-type="text"/>
 							<xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -78,6 +81,7 @@
 					<select name="date" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$dates">
+							<xsl:sort select="." data-type="text"/>
 							<xsl:if test="generate-id() = generate-id($dates[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -91,6 +95,7 @@
 					<select name="pupil" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$pupils">
+							<xsl:sort select="." data-type="text"/>
 							<xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -104,6 +109,7 @@
 					<select name="grade" class="class-input">
 						<option value="">Alle</option>
 						<xsl:for-each select="$grades">
+							<xsl:sort select="." data-type="number"/>
 							<xsl:if test="generate-id() = generate-id($grades[. = current()][1])">
 								<option>
 									<xsl:value-of select="."/>
@@ -135,7 +141,14 @@
 			<th>Datum</th>
 			<th>SchülerIn</th>
 			<th>Note</th>
-			<xsl:apply-templates select="Prüfung/SchülerIn"/>
+			<xsl:apply-templates select="Prüfung/SchülerIn">
+				<xsl:sort select="../@Klasse" data-type="text"/>
+				<xsl:sort select="../@Fach" data-type="text"/>
+				<xsl:sort select="../@Name" data-type="text"/>
+				<xsl:sort select="../@Datum" data-type="text"/>
+				<xsl:sort select="Name" data-type="text"/>
+				<xsl:sort select="Note" data-type="number"/>
+			</xsl:apply-templates>
 		</table>
 
 	</xsl:template>

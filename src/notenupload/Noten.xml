@@ -1,19 +1,19 @@
 <?xml version ="1.0" ?>
-<Prüfung Datum="2021-01-01" Name="Addieren 4" Fach="Mathematik" Klasse="1A">
+<Prüfung Datum="2021-01-01" Name="Multiplizieren 4" Fach="Mathematik" Klasse="4A">
     <SchülerIn>
-        <Name>Karin Mustermann</Name>
+        <Name>Mustermann Anna </Name>
         <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Reto Mustermann</Name>
+        <Name>Mustermann Ben</Name>
         <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Nicole Doe</Name>
+        <Name>Müller Nina</Name>
         <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
-        <Name>Michael Doe</Name>
+        <Name>Müller Jonas</Name>
         <Note>5.0</Note>
     </SchülerIn>
 </Prüfung>
