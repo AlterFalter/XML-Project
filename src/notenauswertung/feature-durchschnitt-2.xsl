@@ -28,10 +28,11 @@
             <div>
                 <table class="notendurchschnitt">
                     <xsl:for-each select="$subjects">
-										    <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
+						<xsl:sort select="." data-type="text"/>
+						<xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
                             <tr>
                                 <td class="firstColumn"><xsl:value-of select="."/>: </td>
-                                <xsl:variable name="subject" select="."/>
+									<xsl:variable name="subject" select="."/>
                                 <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note)"/></td>
                             </tr>
                         </xsl:if>
