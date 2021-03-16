@@ -5,7 +5,7 @@
   <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 	<xsl:variable name="class" select="document('selectedClass.xml')/selectedClass/text()" />
-	<xsl:variable name="exams" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/@Name" />
+	<xsl:variable name="subjects" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class]/@Fach" />
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
@@ -22,15 +22,15 @@
         <h2>Feature Notenauswertung</h2>
         <div class="block">
             <p>
-                <i>Prüfung auswählen:</i>
+                <i>Fach auswählen:</i>
             </p>
-            <form action="insertExam.php" method="post">
+            <form action="insertSubject2.php" method="post">
                 <div>
-                    <label for="class">Prüfung</label>
+                    <label for="class">Fach</label>
                     <select name="class">
-                        <xsl:for-each select="$exams">
+                        <xsl:for-each select="$subjects">
 							<xsl:sort select="." data-type="text"/>
-                            <xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
+                            <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
                                 <option>
                                     <xsl:value-of select="."/> 											
                                 </option>
@@ -38,7 +38,7 @@
 				        </xsl:for-each>
                     </select>
                 </div>
-                <button type="submit">Notenverteilung abfragen</button>
+                <button type="submit">Weiter</button>
             </form>
         </div>
     </xsl:template>
