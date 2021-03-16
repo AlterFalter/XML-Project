@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="about.xsl"?>
 <about>
     <version>1.0</version>
-    <date>14.03.2021</date>
+    <date>16.03.2021</date>
     <authors>
         <author>
             <name>Beat Kurmann</name>
