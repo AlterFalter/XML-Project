@@ -55,14 +55,6 @@
     <!-- stats header -->
     <xsl:template name="bars">
         <svg:svg width="600" height="600">
-			
-			<!--	
-            <svg:text font-size="20" fill="white" x="0" y="50">
-            
-			</svg:text>
-			-->
-			
-    <!--    <xsl:apply-templates/>   -->
 			<xsl:call-template name="bar">
 			    <xsl:with-param name="position">0</xsl:with-param>
 				<xsl:with-param name="grade">Note</xsl:with-param>
@@ -259,7 +251,5 @@
             </xsl:attribute>
             <xsl:value-of select="$grade"/>
         </svg:text>
-
     </xsl:template>
-
 </xsl:stylesheet>

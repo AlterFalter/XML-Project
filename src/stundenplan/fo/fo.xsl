@@ -1,17 +1,15 @@
-<?xml version="1.0" ?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 
     <xsl:variable name="class" select="document('../selectedClass.xml')/selectedClass/text()" />
 
     <xsl:template match="fo">
         <fo:root>
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="stundenplan" page-height="21cm" page-width="29.7cm" margin-top="1cm"
-                                       margin-bottom="2cm" margin-left="2.5cm" margin-right="2.5cm">
-                    <fo:region-body margin-top="1cm"/>
-                    <fo:region-before extent="2cm"/>
-                    <fo:region-after extent="3cm"/>
+                <fo:simple-page-master master-name="stundenplan" page-height="21cm" page-width="29.7cm" margin-top="1cm" margin-bottom="2cm" margin-left="2.5cm" margin-right="2.5cm">
+                    <fo:region-body margin-top="1cm" />
+                    <fo:region-before extent="2cm" />
+                    <fo:region-after extent="3cm" />
                 </fo:simple-page-master>
             </fo:layout-master-set>
             <fo:page-sequence master-reference="stundenplan">
@@ -21,14 +19,12 @@
                     </fo:block>
                 </fo:static-content>
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt"
-                              color="black" text-align="left" padding-top="5pt"
-                              padding-bottom="5pt">
-                        Stundenplan Klasse <xsl:value-of select="$class"/>
+                    <fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt" color="black" text-align="left" padding-top="5pt" padding-bottom="5pt">
+                        Stundenplan Klasse
+                        <xsl:value-of select="$class" />
                     </fo:block>
-                    
-                    <xsl:apply-templates select="document('../../database/stundenplan.xml')/Stundenpläne/Stundenplan[@Klasse=$class]"/>
 
+                    <xsl:apply-templates select="document('../../database/stundenplan.xml')/Stundenpläne/Stundenplan[@Klasse=$class]" />
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
@@ -36,12 +32,12 @@
 
     <xsl:template match="Stundenplan">
         <fo:table space-after.optimum="20pt" width="100%" font-size="11pt">
-            <fo:table-column column-number="1" column-width="10%" border-style="solid" border-width="1pt"/>
-            <fo:table-column column-number="2" column-width="18%" border-style="solid" border-width="1pt"/>
-            <fo:table-column column-number="3" column-width="18%" border-style="solid" border-width="1pt"/>
-            <fo:table-column column-number="4" column-width="18%" border-style="solid" border-width="1pt"/>
-            <fo:table-column column-number="5" column-width="18%" border-style="solid" border-width="1pt"/>
-            <fo:table-column column-number="6" column-width="18%" border-style="solid" border-width="1pt"/>
+            <fo:table-column column-number="1" column-width="10%" border-style="solid" border-width="1pt" />
+            <fo:table-column column-number="2" column-width="18%" border-style="solid" border-width="1pt" />
+            <fo:table-column column-number="3" column-width="18%" border-style="solid" border-width="1pt" />
+            <fo:table-column column-number="4" column-width="18%" border-style="solid" border-width="1pt" />
+            <fo:table-column column-number="5" column-width="18%" border-style="solid" border-width="1pt" />
+            <fo:table-column column-number="6" column-width="18%" border-style="solid" border-width="1pt" />
 
             <fo:table-header background-color="skyblue" font-size="14pt">
                 <fo:table-row>
@@ -82,7 +78,7 @@
                 <fo:table-row>
                     <fo:table-cell number-columns-spanned="6" height="10pt">
                         <fo:block></fo:block>
-                    </fo:table-cell>                         
+                    </fo:table-cell>
                 </fo:table-row>
             </fo:table-footer>
 
@@ -109,7 +105,6 @@
                     <xsl:with-param name="time">15:00 - 16:30</xsl:with-param>
                 </xsl:call-template>
             </fo:table-body>
-
         </fo:table>
     </xsl:template>
 
