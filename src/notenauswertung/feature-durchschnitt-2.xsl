@@ -3,9 +3,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
-    <xsl:variable name="class" select="document('selectedClass.xml')/selectedClass/text()"/>
-	<xsl:variable name="pupil" select="document('selectedPupil.xml')/selectedPupil/text()"/>
-	<xsl:variable name="subjects" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$class and SchülerIn/Name=$pupil]/@Fach" />
+    <xsl:variable name="selectedClass" select="document('selectedClass.xml')/selectedClass/text()"/>
+	<xsl:variable name="selectedPupil" select="document('selectedPupil.xml')/selectedPupil/text()"/>
+	<xsl:variable name="subjects" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung[@Klasse=$selectedClass and SchülerIn/Name=$selectedPupil]/@Fach" />
     <xsl:template match="menu">
         <html>
             <xsl:copy-of select="document('../layout/head.html')"/>
@@ -32,7 +32,7 @@
                             <tr>
                                 <td class="firstColumn"><xsl:value-of select="."/>: </td>
                                 <xsl:variable name="subject" select="."/>
-                                <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$pupil and ../@Klasse=$class and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$pupil and ../@Klasse=$class and ../@Fach=$subject]/Note)"/></td>
+                                <td class="column"><xsl:value-of select="sum(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note) div count(//SchülerIn[Name=$selectedPupil and ../@Klasse=$selectedClass and ../@Fach=$subject]/Note)"/></td>
                             </tr>
                         </xsl:if>
                     </xsl:for-each>

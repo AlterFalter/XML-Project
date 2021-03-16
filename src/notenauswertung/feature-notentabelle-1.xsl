@@ -43,20 +43,22 @@
 				<div>
 					<label for="class">Klasse</label>
 					<select name="class" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$classes">
 							<xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
-								<xsl:if test=". = $selectedClass">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedClass">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedClass">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
@@ -64,20 +66,22 @@
 				<div>
 					<label for="subject">Fach</label>
 					<select name="subject" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$subjects">
 							<xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">
-								<xsl:if test=". = $selectedSubject">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedSubject">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedSubject">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
@@ -86,20 +90,22 @@
 				<div>
 					<label for="exam">Prüfung</label>
 					<select name="exam" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$exams">
 							<xsl:if test="generate-id() = generate-id($exams[. = current()][1])">
-								<xsl:if test=". = $selectedExam">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedExam">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedExam">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
@@ -107,20 +113,22 @@
 				<div>
 					<label for="date">Datum</label>
 					<select name="date" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$dates">
 							<xsl:if test="generate-id() = generate-id($dates[. = current()][1])">
-								<xsl:if test=". = $selectedDate">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedDate">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedDate">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
@@ -128,20 +136,22 @@
 				<div>
 					<label for="pupil">SchülerIn</label>
 					<select name="pupil" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$pupils">
 							<xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
-								<xsl:if test=". = $selectedPupil">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedPupil">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedPupil">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
@@ -149,20 +159,22 @@
 				<div>
 					<label for="grade">Note</label>
 					<select name="grade" class="class-input">
-						<option value="@*">Alle</option>
+						<option value="">Alle</option>
 						<xsl:for-each select="$grades">
 							<xsl:if test="generate-id() = generate-id($grades[. = current()][1])">
-								<xsl:if test=". = $selectedGrade">
-									<option>
-										<xsl:attribute name="selected">selected</xsl:attribute>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
-								<xsl:if test=". != $selectedGrade">
-									<option>
-										<xsl:value-of select="."/>
-									</option>
-								</xsl:if>
+								<xsl:choose>
+									<xsl:when test=". = $selectedGrade">
+										<option>
+											<xsl:attribute name="selected">selected</xsl:attribute>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:when>
+									<xsl:otherwise>
+										<option>
+											<xsl:value-of select="."/>
+										</option>
+									</xsl:otherwise>
+								</xsl:choose>
 							</xsl:if>
 						</xsl:for-each>
 					</select>
