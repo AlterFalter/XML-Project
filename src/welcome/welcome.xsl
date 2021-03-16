@@ -10,7 +10,7 @@
                 <xsl:copy-of select="document('../layout/header.html')" />
                 <div id="content" class="container">
                     <h2>Willkommen bei BILIAS</h2>
-                    <p><q>Das billigere und benutzerfreundlichere ILIAS!</q> - Die Ersteller von BILIAS</p>
+                    <p><q>Das bessere und benutzerfreundlichere ILIAS!</q> - Die Ersteller von BILIAS</p>
                     <h3>Navigation</h3>
                     <ul>
                         <xsl:apply-templates select="navigationItems/item"></xsl:apply-templates>

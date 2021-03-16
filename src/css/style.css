@@ -19,6 +19,7 @@ header {
 }
 header h1 {
     color: var(--gray-dark);
+    margin: 0;
 }
 footer {
     padding-top: 40px;
