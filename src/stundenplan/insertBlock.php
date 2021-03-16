@@ -1,8 +1,6 @@
 <?php
 
 // gather user input
-foreach ($_POST as $key => $value) {
-}
 $class = $_POST['class'];
 $day = $_POST['day'];
 $time = $_POST['time'];

@@ -1,9 +1,6 @@
 <?php
 
 // gather user input
-foreach ($_POST as $key => $value) {
-}
-
 $classData = $_POST['class'];
 $subjectData = $_POST['subject'];
 $examData = $_POST['exam'];
@@ -49,7 +46,6 @@ exit();
 
 function insertData($dbFile, $data, $xPathQuery, $xsd)
 {
-
 	// load XML database
 	
 	$dataRaw = file_get_contents($dbFile);
@@ -87,7 +83,7 @@ function validateDatabase($db, $xsd)
     if ($result) {
         libxml_use_internal_errors(false);
         return;
-}	
+    }	
 
     // create error description
     echo('<html><body></body><a href="../feature-notenauswertung.xml">back</a><p>');
@@ -96,7 +92,6 @@ function validateDatabase($db, $xsd)
     echo('</p></body></html>');
     libxml_use_internal_errors(false);
     exit();
-
 }
 
 function printErrors()

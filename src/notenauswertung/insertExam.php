@@ -1,8 +1,6 @@
 <?php
 
 // gather user input
-foreach ($_POST as $key => $value) {
-}
 $class = $_POST['class'];
 
 // load XML database
@@ -58,7 +56,6 @@ function validateDatabase($db)
     echo('</p></body></html>');
     libxml_use_internal_errors(false);
     exit();
-
 }
 
 function printErrors()

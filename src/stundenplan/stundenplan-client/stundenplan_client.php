@@ -5,8 +5,6 @@ class StundenplanClient {
 
     public function tempSaveSelectedClass() {
         // gather user input
-        foreach ($_POST as $key => $value) {
-        }
         $class = $_POST['class'];
 
         $db = $this->getDatabase();
