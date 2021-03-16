@@ -13,12 +13,6 @@ $stundenplanClient->tempSaveSelectedClass();
 // Step #1: create FO
 ////////////////////////////////
 
-/**
- * perform XSLT transformation with PHP
- * @author Roland Christen <roland.christen@hslu.ch>
- * API: http://php.net/manual/en/class.xsltprocessor.php
- */
-
 // load XML
 $data = file_get_contents('fo/fo.xml');
 $xml = new DOMDocument();
@@ -53,7 +47,7 @@ $pdfFile = $serviceClient->processFile($foFile);
 
 header ("Content-Type: ".filetype($pdfFile));
 header ("Content-Length: ".filesize($pdfFile));
-header ("Content-Disposition: attachment; filename=Stundenplan");
+header ("Content-Disposition: attachment; filename=Stundenplan.pdf");
 readfile($pdfFile);
 
 ?>
