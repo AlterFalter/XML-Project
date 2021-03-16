@@ -1,360 +1,360 @@
 <?xml version="1.0"?>
 <Stundenpläne xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="stundenplan.xsd">
-  <Stundenplan Klasse="1A">
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Lustig</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-      <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Franz&#xF6;sisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Jean Luc</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Religion</Fach>
-      <Raum>Raum 2F</Raum>
-      <Lehrperson>Anne Alphabet</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schwimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Musik</Fach>
-      <Raum>Singsaal</Raum>
-      <Lehrperson>Hans Hallo</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-      <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Kunst</Fach>
-      <Raum>Atelier</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-  </Stundenplan>
-  <Stundenplan Klasse="1B">
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Lustig</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-	  <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-      <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schwimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-	  <Fach>Musik</Fach>
-      <Raum>Singsaal</Raum>
-      <Lehrperson>Hans Hallo</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-	  <Fach>Franz&#xF6;sisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Jean Luc</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Religion</Fach>
-      <Raum>Raum 2F</Raum>
-      <Lehrperson>Anne Alphabet</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-	  <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-      <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Kunst</Fach>
-      <Raum>Atelier</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-  </Stundenplan>
-  <Stundenplan Klasse="2A">
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Schwimmen</Fach>
-      <Raum>Schwimmbad</Raum>
-      <Lehrperson>Bob Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Montag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-      <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-	  <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Beispiel</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Franz&#xF6;sisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Jean Luc</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Dienstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Religion</Fach>
-      <Raum>Raum 2F</Raum>
-      <Lehrperson>Anne Alphabet</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-	  <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Mittwoch</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Sport</Fach>
-      <Raum>Turnhalle A</Raum>
-      <Lehrperson>Max Muster</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-	  <Fach>Deutsch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Dennis Deutlich</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-	  <Fach>Englisch</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-	  <Fach>Kunst</Fach>
-      <Raum>Atelier</Raum>
-      <Lehrperson>Karin Mustermann</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Donnerstag</Tag>
-      <Zeit>15:00 - 16:30</Zeit>
-	  <Fach>Musik</Fach>
-      <Raum>Singsaal</Raum>
-      <Lehrperson>Hans Hallo</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>8:15 - 9:45</Zeit>
-	  <Fach>Mathematik</Fach>
-      <Raum>Online</Raum>
-      <Lehrperson>Peter Lustig</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-    <Block>
-      <Tag>Freitag</Tag>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Fach>Werken</Fach>
-      <Raum>Keller Raum 0C</Raum>
-      <Lehrperson>Willi Work</Lehrperson>
-    </Block>
-  </Stundenplan>
-  <Konfiguration>
-    <Tage>
-      <Tag>Montag</Tag>
-      <Tag>Dienstag</Tag>
-      <Tag>Mittwoch</Tag>
-      <Tag>Donnerstag</Tag>
-      <Tag>Freitag</Tag>
-    </Tage>
-    <Zeiten>
-      <Zeit>8:15 - 9:45</Zeit>
-      <Zeit>10:15 - 11:45</Zeit>
-      <Zeit>13:15 - 14:45</Zeit>
-      <Zeit>15:00 - 16:30</Zeit>
-    </Zeiten>
-  </Konfiguration>
+    <Stundenplan Klasse="1A">
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Lustig</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Franz&#xF6;sisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Jean Luc</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Religion</Fach>
+            <Raum>Raum 2F</Raum>
+            <Lehrperson>Anne Alphabet</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schwimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Musik</Fach>
+            <Raum>Singsaal</Raum>
+            <Lehrperson>Hans Hallo</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Kunst</Fach>
+            <Raum>Atelier</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+    </Stundenplan>
+    <Stundenplan Klasse="1B">
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Lustig</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schwimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Musik</Fach>
+            <Raum>Singsaal</Raum>
+            <Lehrperson>Hans Hallo</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Franz&#xF6;sisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Jean Luc</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Religion</Fach>
+            <Raum>Raum 2F</Raum>
+            <Lehrperson>Anne Alphabet</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Kunst</Fach>
+            <Raum>Atelier</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+    </Stundenplan>
+    <Stundenplan Klasse="2A">
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Schwimmen</Fach>
+            <Raum>Schwimmbad</Raum>
+            <Lehrperson>Bob Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Montag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Beispiel</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Franz&#xF6;sisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Jean Luc</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Dienstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Religion</Fach>
+            <Raum>Raum 2F</Raum>
+            <Lehrperson>Anne Alphabet</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Mittwoch</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Sport</Fach>
+            <Raum>Turnhalle A</Raum>
+            <Lehrperson>Max Muster</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Deutsch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Dennis Deutlich</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Englisch</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Kunst</Fach>
+            <Raum>Atelier</Raum>
+            <Lehrperson>Karin Mustermann</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Donnerstag</Tag>
+            <Zeit>15:00 - 16:30</Zeit>
+            <Fach>Musik</Fach>
+            <Raum>Singsaal</Raum>
+            <Lehrperson>Hans Hallo</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Fach>Mathematik</Fach>
+            <Raum>Online</Raum>
+            <Lehrperson>Peter Lustig</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+        <Block>
+            <Tag>Freitag</Tag>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Fach>Werken</Fach>
+            <Raum>Keller Raum 0C</Raum>
+            <Lehrperson>Willi Work</Lehrperson>
+        </Block>
+    </Stundenplan>
+    <Konfiguration>
+        <Tage>
+            <Tag>Montag</Tag>
+            <Tag>Dienstag</Tag>
+            <Tag>Mittwoch</Tag>
+            <Tag>Donnerstag</Tag>
+            <Tag>Freitag</Tag>
+        </Tage>
+        <Zeiten>
+            <Zeit>8:15 - 9:45</Zeit>
+            <Zeit>10:15 - 11:45</Zeit>
+            <Zeit>13:15 - 14:45</Zeit>
+            <Zeit>15:00 - 16:30</Zeit>
+        </Zeiten>
+    </Konfiguration>
 </Stundenpläne>

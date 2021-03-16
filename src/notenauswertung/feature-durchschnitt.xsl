@@ -34,7 +34,7 @@
                                     <xsl:value-of select="."/> 											
                                 </option>
                             </xsl:if>
-				                </xsl:for-each>
+				        </xsl:for-each>
                     </select>
                 </div>
                 <button type="submit">Weiter</button>

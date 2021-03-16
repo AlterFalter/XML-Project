@@ -61,7 +61,6 @@
 						</xsl:for-each>
 					</select>
 				</div>
-
 				<div>
 					<label for="exam">Prüfung</label>
 					<select name="exam" class="class-input">
@@ -126,14 +125,11 @@
 				</div>
 			</form>
 			<br/>
-
 			<xsl:apply-templates select="$db/Prüfungen" />
-
 		</div>
 	</xsl:template>
 
 	<xsl:template match="Prüfungen">
-
 		<table border="1">
 			<th>Klasse</th>
 			<th>Fach</th>
@@ -150,7 +146,6 @@
 				<xsl:sort select="Note" data-type="number"/>
 			</xsl:apply-templates>
 		</table>
-
 	</xsl:template>
 
 	<xsl:template match="Prüfung/SchülerIn">
@@ -175,5 +170,4 @@
 			</td>
 		</tr>
 	</xsl:template>
-
 </xsl:stylesheet>
