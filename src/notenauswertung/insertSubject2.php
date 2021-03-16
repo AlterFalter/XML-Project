@@ -6,7 +6,7 @@ foreach ($_POST as $key => $value) {
 $class = $_POST['class'];
 
 // load XML database
-$dbFile = 'selectedExam.xml';
+$dbFile = 'selectedSubject.xml';
 $dataRaw = file_get_contents($dbFile);
 $db = new DOMDocument();
 $db->loadXML($dataRaw);
@@ -24,13 +24,13 @@ file_put_contents($dbFile, $db->saveXML());
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Content-Type: application/xml; charset=utf-8");
-header('Location: feature-verteilung-3.xml');
+header('Location: feature-verteilung-2.xml');
 exit();
 
 function updateClass($db, $class)
 {
     // query stats
-    $xPathQuery = "//selectedExam";
+    $xPathQuery = "//selectedSubject";
     $xPath = new DOMXPath($db);
     $nodes = $xPath->query($xPathQuery);
 
@@ -44,7 +44,7 @@ function validateDatabase($db)
     libxml_use_internal_errors(true);
 
     // validate against Schema
-    $xsd = 'selectedExam.xsd';
+    $xsd = 'selectedSubject.xsd';
     $result = $db->schemaValidate($xsd);
     if ($result) {
         libxml_use_internal_errors(false);
