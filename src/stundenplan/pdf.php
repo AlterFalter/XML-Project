@@ -53,7 +53,8 @@ $pdfFile = $serviceClient->processFile($foFile);
 
 header ("Content-Type: ".filetype($pdfFile));
 header ("Content-Length: ".filesize($pdfFile));
-header ("Content-Disposition: attachment; filename=Stundenplan");
+$className = $stundenplanClient->getClassName();
+header ("Content-Disposition: attachment; filename=Stundenplan" . $className . ".pdf");
 readfile($pdfFile);
 
 ?>

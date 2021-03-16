@@ -1,6 +1,7 @@
 <?php
 
 class StundenplanClient {
+    const DB_FILE_NAME = 'selectedClass.xml';
 
     public function tempSaveSelectedClass() {
         // gather user input
@@ -8,11 +9,7 @@ class StundenplanClient {
         }
         $class = $_POST['class'];
 
-        // load XML database
-        $dbFile = 'selectedClass.xml';
-        $dataRaw = file_get_contents($dbFile);
-        $db = new DOMDocument();
-        $db->loadXML($dataRaw);
+        $db = $this->getDatabase();
 
         // add new entry to xml
         $this->updateSelectedClass($db, $class);
@@ -21,8 +18,7 @@ class StundenplanClient {
         $this->validateDatabase($db);
 
         // save XML database
-        file_put_contents($dbFile, $db->saveXML());
-
+        file_put_contents(self::DB_FILE_NAME, $db->saveXML());
     }
 
     public function redirectUser() {
@@ -30,6 +26,24 @@ class StundenplanClient {
         header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
         header("Content-Type: application/xml; charset=utf-8");
         header('Location: feature-stundenplan-edit.xml');
+    }
+
+    public function getClassName() {
+        $stundenplanDB = $this->getDatabase();
+        
+        $xPathQuery = '//selectedClass';
+        $xPath = new DOMXPath($stundenplanDB);
+        $selectedBlockNode = $xPath->query($xPathQuery);
+        return $selectedBlockNode->item(0)->nodeValue;
+    }
+
+    private function getDatabase() {
+        // load XML database
+        $dataRaw = file_get_contents(self::DB_FILE_NAME);
+        $db = new DOMDocument();
+        $db->loadXML($dataRaw);
+
+        return $db;
     }
 
     private function updateSelectedClass($db, $class) {
