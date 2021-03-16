@@ -24,6 +24,8 @@
         <p>
             <i>Stundenplan erfolgreich updated!</i>
         </p>
+        <p><a href="feature-stundenplan-edit.xml">Weiter editieren</a></p>
+        <p><a href="feature-stundenplan.xml">Zurück zur Übersicht</a></p>
     </xsl:template>
 
 </xsl:stylesheet>
