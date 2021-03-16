@@ -17,3 +17,12 @@ The tool is based on XML technologies and Python.
 5. Andere Personen akzeptieren PR
 6. Mergen
 7. Status Update im Master/Main-Branch
+
+## Contributions
+
+Main contributors:
+* Roger Metzger
+* Beat Kurmann
+* Yannis Krämer
+
+Some code in this project was provided by our professor Roland Christen.
