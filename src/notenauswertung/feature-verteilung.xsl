@@ -1,19 +1,17 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
     <xsl:variable name="classes" select="document('../database/Noten-DB.xml')/Prüfungen/Prüfung/@Klasse" />
     <xsl:template match="menu">
         <html>
-            <xsl:copy-of select="document('../layout/head.html')"/>
+            <xsl:copy-of select="document('../layout/head.html')" />
             <body>
-                <xsl:copy-of select="document('../layout/header.html')"/>
+                <xsl:copy-of select="document('../layout/header.html')" />
                 <div id="content" class="container">
-                    <xsl:apply-templates select="feature"/>
+                    <xsl:apply-templates select="feature" />
                 </div>
-                <xsl:copy-of select="document('../layout/footer.html')"/>
+                <xsl:copy-of select="document('../layout/footer.html')" />
             </body>
         </html>
     </xsl:template>
@@ -28,13 +26,13 @@
                     <label for="class">Klasse</label>
                     <select name="class">
                         <xsl:for-each select="$classes">
-							<xsl:sort select="." data-type="text"/>
+                            <xsl:sort select="." data-type="text" />
                             <xsl:if test="generate-id() = generate-id($classes[. = current()][1])">
                                 <option>
-                                    <xsl:value-of select="."/> 											
+                                    <xsl:value-of select="." />
                                 </option>
                             </xsl:if>
-				                </xsl:for-each>
+                        </xsl:for-each>
                     </select>
                 </div>
                 <button type="submit">Weiter</button>

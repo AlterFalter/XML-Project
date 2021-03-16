@@ -1,148 +1,147 @@
 <?xml version="1.0"?>
-<Prüfungen xsi:noNamespaceSchemaLocation="Noten-DB.xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Prüfung Datum="2021-01-01" Name="Addieren 1" Fach="Mathematik" Klasse="1A">
-    <SchülerIn>
-      <Name>Meier Karin</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Meier Reto</Name>
-      <Note>4.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Steiner Nicole</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Gerber Michael</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-01-01" Name="Addieren 2" Fach="Mathematik" Klasse="1A">
-    <SchülerIn>
-      <Name>Meier Karin</Name>
-      <Note>5.5</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Meier Reto</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Steiner Nicole</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Gerber Michael</Name>
-      <Note>6.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-02-01" Name="Schreiben 1" Fach="Deutsch" Klasse="1A">
-    <SchülerIn>
-      <Name>Meier Karin</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Meier Reto</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Steiner Nicole</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Gerber Michael</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-01-01" Name="Vocabulary 1" Fach="Englisch" Klasse="1A">
-    <SchülerIn>
-      <Name>Meier Karin</Name>
-      <Note>4.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Meier Reto</Name>
-      <Note>4.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Steiner Nicole</Name>
-      <Note>4.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Gerber Michael</Name>
-      <Note>4.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-03-15" Name="Multiplizieren 5" Fach="Mathematik" Klasse="5A">
-    <SchülerIn>
-        <Name>Arnold Sandra</Name>
-        <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-        <Name>Moser Tim</Name>
-        <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-        <Name>Bucher Emma</Name>
-        <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-        <Name>Bucher Luca</Name>
-        <Note>5.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-03-01" Name="Multiplizieren 1" Fach="Mathematik" Klasse="2B">
-    <SchülerIn>
-      <Name>Küng Erika</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Baumann Max</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Mia</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Noah</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-03-01" Name="Diktat 1" Fach="Deutsch" Klasse="2B">
-    <SchülerIn>
-      <Name>Küng Erika</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Baumann Max</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Mia</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Noah</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-  </Prüfung>
-  <Prüfung Datum="2021-03-01" Name="Vocabulary 2" Fach="Englisch" Klasse="2B">
-    <SchülerIn>
-      <Name>Küng Erika</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Baumann Max</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Mia</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-    <SchülerIn>
-      <Name>Schmid Noah</Name>
-      <Note>5.0</Note>
-    </SchülerIn>
-  </Prüfung>
+<Prüfungen xsi:noNamespaceSchemaLocation="Noten-DB.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Prüfung Datum="2021-01-01" Name="Addieren 1" Fach="Mathematik" Klasse="1A">
+        <SchülerIn>
+            <Name>Meier Karin</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Meier Reto</Name>
+            <Note>4.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Steiner Nicole</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Gerber Michael</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-01-01" Name="Addieren 2" Fach="Mathematik" Klasse="1A">
+        <SchülerIn>
+            <Name>Meier Karin</Name>
+            <Note>5.5</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Meier Reto</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Steiner Nicole</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Gerber Michael</Name>
+            <Note>6.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-02-01" Name="Schreiben 1" Fach="Deutsch" Klasse="1A">
+        <SchülerIn>
+            <Name>Meier Karin</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Meier Reto</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Steiner Nicole</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Gerber Michael</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-01-01" Name="Vocabulary 1" Fach="Englisch" Klasse="1A">
+        <SchülerIn>
+            <Name>Meier Karin</Name>
+            <Note>4.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Meier Reto</Name>
+            <Note>4.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Steiner Nicole</Name>
+            <Note>4.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Gerber Michael</Name>
+            <Note>4.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-03-15" Name="Multiplizieren 5" Fach="Mathematik" Klasse="5A">
+        <SchülerIn>
+            <Name>Arnold Sandra</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Moser Tim</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Bucher Emma</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Bucher Luca</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-03-01" Name="Multiplizieren 1" Fach="Mathematik" Klasse="2B">
+        <SchülerIn>
+            <Name>Küng Erika</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Baumann Max</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Mia</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Noah</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-03-01" Name="Diktat 1" Fach="Deutsch" Klasse="2B">
+        <SchülerIn>
+            <Name>Küng Erika</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Baumann Max</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Mia</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Noah</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+    </Prüfung>
+    <Prüfung Datum="2021-03-01" Name="Vocabulary 2" Fach="Englisch" Klasse="2B">
+        <SchülerIn>
+            <Name>Küng Erika</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Baumann Max</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Mia</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+        <SchülerIn>
+            <Name>Schmid Noah</Name>
+            <Note>5.0</Note>
+        </SchülerIn>
+    </Prüfung>
 </Prüfungen>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" />
@@ -10,7 +10,10 @@
                 <xsl:copy-of select="document('../layout/header.html')" />
                 <div id="content" class="container">
                     <h2>Willkommen bei BILIAS</h2>
-                    <p><q>Das bessere und benutzerfreundlichere ILIAS!</q> - Die Ersteller von BILIAS</p>
+                    <p>
+                        <q>Das bessere und benutzerfreundlichere ILIAS!</q>
+                        - Die Ersteller von BILIAS
+                    </p>
                     <h3>Navigation</h3>
                     <ul>
                         <xsl:apply-templates select="navigationItems/item"></xsl:apply-templates>
