@@ -11,9 +11,8 @@ The tool is based on XML technologies and Python.
 ## Setup
 
 You can use XAMPP to start the project.
-1. Copy the code folder (src/) to your "C:\xampp\htdocs" folder.
-<br>
-As an alternative, you can create a redirect. This [post](https://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs-folder) shows you how.
+
+1. Copy the code folder (src/) to your "C:\xampp\htdocs" folder.<br>As an alternative, you can create a redirect. This [post](https://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs-folder) shows you how.
 
 2. You have to edit the Apache "php.ini" file. Uncomment in it the line "extension=xsl" by removing the semicolon at the beginning of the line.
 
