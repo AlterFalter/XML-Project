@@ -1,7 +1,7 @@
 <?xml version ="1.0" ?>
 <Prüfung Datum="2021-01-01" Name="Multiplizieren 4" Fach="Mathematik" Klasse="4A">
     <SchülerIn>
-        <Name>Mustermann Anna </Name>
+        <Name>Mustermann Anna</Name>
         <Note>5.0</Note>
     </SchülerIn>
     <SchülerIn>
