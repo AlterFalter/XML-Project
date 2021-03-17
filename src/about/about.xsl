@@ -9,7 +9,7 @@
             <body>
                 <xsl:copy-of select="document('../layout/header.html')"/>
                 <div id="content" class="container">
-                    <h3>Über uns</h3>
+                    <h2>Über uns</h2>
                     <h4>Allgemein</h4>
                     <p>
                         Version:
