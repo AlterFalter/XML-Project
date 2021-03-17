@@ -48,11 +48,9 @@
 	<xsl:variable name="numberOf_5.5" select="count(document('../database/Noten-DB.xml')/Prüfungen/Prüfung/SchülerIn/Note[../../@Klasse=$selectedClass and ../Name=$selectedPupil and ../../@Fach=$selectedSubject and text()='5.5'])" />
 	<xsl:variable name="numberOf_6.0" select="count(document('../database/Noten-DB.xml')/Prüfungen/Prüfung/SchülerIn/Note[../../@Klasse=$selectedClass and ../Name=$selectedPupil and ../../@Fach=$selectedSubject and text()='6.0'])" />
 
-
-    <!-- Global variables -->
     <xsl:variable name="baseline" select="200"/>
 
-    <!-- stats header -->
+    <!-- bars -->
     <xsl:template name="bars">
         <svg:svg width="600" height="600">
 			<xsl:call-template name="bar">
@@ -174,9 +172,8 @@
         </svg:svg>
     </xsl:template>
 
-    <!-- stats bars -->
-<!--    <xsl:template match="class"> -->
-		<xsl:template name="bar" >
+	<!-- bar -->
+	<xsl:template name="bar" >
 		<xsl:param name="position" />
 		<xsl:param name="grade" />
 		<xsl:param name="numberOf" />
@@ -186,11 +183,10 @@
         <xsl:variable name="y-offset" select="$baseline"/>
         <xsl:variable name="y" select="$y-offset - $numberOf*10"/>
 
-        <!-- bar -->
         <svg:path>
             <xsl:attribute name="style">
                 <xsl:text>fill:</xsl:text>
-           <!--     red   -->
+           <!--     color   -->
 		   <xsl:value-of select="$color" />
 				
             </xsl:attribute>
@@ -240,9 +236,7 @@
         </svg:text>
 
         <!-- bar legend -->
-        <svg:text
-                fill="black"
-        >
+        <svg:text fill="black">
             <xsl:attribute name="x">
                 <xsl:value-of select="$x-offset - 10"/>
             </xsl:attribute>

@@ -26,8 +26,8 @@
             </p>
             <form action="insertPupil.php" method="post">
                 <div>
-                    <label for="class">SchülerIn</label>
-                    <select name="class">
+                    <label for="pupil">SchülerIn</label>
+                    <select name="pupil">
                         <xsl:for-each select="$pupils">
 							<xsl:sort select="." data-type="text"/>
                             <xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">

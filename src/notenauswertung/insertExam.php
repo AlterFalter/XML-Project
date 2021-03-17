@@ -1,7 +1,7 @@
 <?php
 
 // gather user input
-$class = $_POST['class'];
+$exam = $_POST['exam'];
 
 // load XML database
 $dbFile = 'selectedExam.xml';
@@ -10,7 +10,7 @@ $db = new DOMDocument();
 $db->loadXML($dataRaw);
 
 // add new entry to xml
-updateClass($db, $class);
+updateClass($db, $exam);
 
 // validate
 validateDatabase($db);
@@ -25,7 +25,7 @@ header("Content-Type: application/xml; charset=utf-8");
 header('Location: feature-verteilung-3.xml');
 exit();
 
-function updateClass($db, $class)
+function updateClass($db, $exam)
 {
     // query stats
     $xPathQuery = "//selectedExam";
@@ -33,7 +33,7 @@ function updateClass($db, $class)
     $nodes = $xPath->query($xPathQuery);
 
     // change
-    $nodes->item(0)->nodeValue = $class;
+    $nodes->item(0)->nodeValue = $exam;
 }
 
 function validateDatabase($db)

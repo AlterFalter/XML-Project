@@ -24,8 +24,8 @@
             </p>
             <form action="insertSubject2.php" method="post">
                 <div>
-                    <label for="class">Fach</label>
-                    <select name="class">
+                    <label for="subject">Fach</label>
+                    <select name="subject">
                         <xsl:for-each select="$subjects">
                             <xsl:sort select="." data-type="text" />
                             <xsl:if test="generate-id() = generate-id($subjects[. = current()][1])">

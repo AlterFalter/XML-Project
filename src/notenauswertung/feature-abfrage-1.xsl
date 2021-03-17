@@ -27,8 +27,8 @@
             </p>
             <form action="insertPupil2.php" method="post">
                 <div>
-                    <label for="class">SchülerIn</label>
-                    <select name="class">
+                    <label for="pupil">SchülerIn</label>
+                    <select name="pupil">
                         <xsl:for-each select="$pupils">
                             <xsl:sort select="." data-type="text" />
                             <xsl:if test="generate-id() = generate-id($pupils[. = current()][1])">
@@ -39,7 +39,7 @@
                         </xsl:for-each>
                     </select>
                 </div>
-                <button type="submit">Noten abfragen</button>
+                <button type="submit">Weiter</button>
             </form>
         </div>
     </xsl:template>

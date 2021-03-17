@@ -1,7 +1,7 @@
 <?php
 
 // gather user input
-$class = $_POST['class'];
+$pupil = $_POST['pupil'];
 
 // load XML database
 $dbFile = 'selectedPupil.xml';
@@ -10,7 +10,7 @@ $db = new DOMDocument();
 $db->loadXML($dataRaw);
 
 // add new entry to xml
-updateClass($db, $class);
+updateClass($db, $pupil);
 
 // validate
 validateDatabase($db);
@@ -25,7 +25,7 @@ header("Content-Type: application/xml; charset=utf-8");
 header('Location: feature-durchschnitt-2.xml');
 exit();
 
-function updateClass($db, $class)
+function updateClass($db, $pupil)
 {
     // query stats
     $xPathQuery = "//selectedPupil";
@@ -33,7 +33,7 @@ function updateClass($db, $class)
     $nodes = $xPath->query($xPathQuery);
 
     // change
-    $nodes->item(0)->nodeValue = $class;
+    $nodes->item(0)->nodeValue = $pupil;
 }
 
 function validateDatabase($db)
