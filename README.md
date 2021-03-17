@@ -8,6 +8,15 @@ The tool is based on XML technologies and Python.
 
 * BILIAS - Bessere und benutzerfreundlichere ILIAS
 
+## Setup
+
+You can use XAMPP to start the project.
+Copy the code folder to your "C:\xampp\htdocs" folder.
+Alternatively, you can create a redirect. This [post](https://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs-folder) shows you how.
+You have to edit the Apache "php.ini" file. Uncomment the line "extension=xsl" by removing the semicolon at the beginning of the line.
+Start/Restart XAMPP Apache.
+Go to localhost or whatever you configured as an address.
+
 ## Workflow
 
 1. Eintragen im Tasks-File im Master/Main-Branch (Status- und Personenupdate)
@@ -17,15 +26,6 @@ The tool is based on XML technologies and Python.
 5. Andere Personen akzeptieren PR
 6. Mergen
 7. Status Update im Master/Main-Branch
-
-## Setup
-
-You can use XAMPP to start the project.
-Copy the code folder to your "C:\xampp\htdocs" folder.
-Alternatively, you can create a redirect. This [post](https://stackoverflow.com/questions/1408/make-xampp-apache-serve-file-outside-of-htdocs-folder) shows you how.
-You have to edit the Apache "php.ini" file. Uncomment the line "extension=xsl" by removing the semicolon at the beginning of the line.
-Start/Restart XAMPP Apache.
-Go to localhost or whatever you configured as an address.
 
 ## Contributions
 
