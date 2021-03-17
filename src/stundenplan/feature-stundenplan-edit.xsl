@@ -32,7 +32,7 @@
                 <div>
                     <label for="day">Tag</label>
                     <select name="day" id="day-input" required="true">
-                        <xsl:for-each select="document('../database/Stundenplan.xml')/Stundenpläne/Konfiguration/Tage/Tag">
+                        <xsl:for-each select="document('../database/stundenplan.xml')/Stundenpläne/Konfiguration/Tage/Tag">
                             <option>
                                 <xsl:value-of select="." />
                             </option>
@@ -42,7 +42,7 @@
                 <div>
                     <label for="time">Zeit:</label>
                     <select name="time" id="time-input" required="true">
-                        <xsl:for-each select="document('../database/Stundenplan.xml')/Stundenpläne/Konfiguration/Zeiten/Zeit">
+                        <xsl:for-each select="document('../database/stundenplan.xml')/Stundenpläne/Konfiguration/Zeiten/Zeit">
                             <option>
                                 <xsl:value-of select="." />
                             </option>
