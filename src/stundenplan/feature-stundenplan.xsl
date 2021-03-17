@@ -32,10 +32,10 @@
 
     <xsl:template match="Stundenplan">
         <div class="block">
-            <h2>
+            <h3>
                 Klasse
                 <xsl:value-of select="@Klasse" />
-            </h2>
+            </h3>
             <table>
                 <tr>
                     <th class="firstColumn">Zeit</th>
