@@ -24,4 +24,4 @@
 | About Seite | Done | Yannis | XHTML, CSS | |
 | neue Noten überschreiben alte Noten | Done | Beat | PHP, XML | Wenn alles bei einem Noten-Eintrag matched ausser die Note, wird nur die Note aktualisiert |
 | Design fixes | Done | Yannis | XHTML, CSS | |
-| Server final upload | In Progress | Beat, Roger, Yannis | PHP, SSH | Upload the final version of the code to the server and test all of the functionality. |
+| Server final upload | Done | Beat, Roger, Yannis | PHP, SSH | Upload the final version of the code to the server and test all of the functionality. |
