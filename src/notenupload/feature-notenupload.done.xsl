@@ -18,7 +18,7 @@
 
     <xsl:template match="feature">
         <!-- Title and nav  -->
-        <h2>Feature Noten Upload</h2>
+        <h2>Noten Upload</h2>
         <p>
             <i>Die Datei Noten.xml wurde erfolgreich hochgeladen</i>
         </p>
