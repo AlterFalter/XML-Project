@@ -28,6 +28,12 @@ You can use XAMPP to start the project.
 6. Mergen
 7. Status Update im Master/Main-Branch
 
+## Disclaimer
+
+This repository knowingly incorporates security flaws for the sake of learning the used technologies.
+This repositories sole purpose is to get insights on what's possible with the technologies, especially XML.
+Under no condition should this project or a derivation be deployed with any sensitive or private data.
+
 ## Contributions
 
 Main contributors:
