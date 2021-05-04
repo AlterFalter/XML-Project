@@ -1,14 +1,13 @@
-# XML-Project from group 6
+# XML-Project from group 6 - BILIAS
 
-The project in the XML module from HSLU Projectweek in February 2021.
-
-This project is a tool for teachers to create a class schedule and check the grades of their students.
-
+This is the project from the XML module from HSLU project week in February 2021.<br>
 The tool is based on XML technologies and PHP.
 
-## Name
+## Project
 
-* BILIAS - Bessere und benutzerfreundlichere ILIAS
+* BILIAS - Besseres und benutzerfreundlicheres ILIAS
+
+BILIAS is a tool for teachers to create a class schedule and check the grades of their students.
 
 ## Setup
 
